@@ -1,15 +1,18 @@
-#ifndef QAOA_H
-#define QAOA_H
+#ifndef QAOA_HPP
+#define QAOA_HPP
+
+#pragma once
 
 #include <cmath>
 #include <cstdint>
-#include <vector>
+#include <ap_fixed.h>
 
 // Define PI since M_PI is not standard C++
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
 
+typedef ap_fixed<32,12> qfix; // example
 // =======================================================
 // 1. Configuration 
 // =======================================================
@@ -17,12 +20,12 @@
 /**
  * Configuration structure for N_CITIES.
  */
-template<int N_CITIES>
+template<int N_CITY>
 struct Config {
-    static const int nCities = N_CITIES;
-    static const int nQubits = N_CITIES * N_CITIES;
+    static const int nCities = N_CITY;
+    static const int nQubits = N_CITY * N_CITY;
     // DIM = 2^(N_QUBITS)
-    static const int DIM = 1 << (N_CITIES * N_CITIES);
+    static const int DIM = 1 << (N_CITY * N_CITY);
 };
 typedef Config<3> CFG; // Default 3 cities
 
@@ -31,11 +34,11 @@ typedef Config<3> CFG; // Default 3 cities
 // =======================================================
 
 struct ComplexQ {
-    double re;
-    double im;
+    qfix re;
+    qfix im;
 
     ComplexQ(): re(0.0), im(0.0) {}
-    ComplexQ(double _r, double _i): re(_r), im(_i) {}
+    ComplexQ(qfix _r, qfix _i): re(_r), im(_i) {}
 
     // Operator overloads (inline definitions kept here for efficiency)
     inline ComplexQ operator*(const ComplexQ& o) const {
@@ -44,9 +47,12 @@ struct ComplexQ {
     inline ComplexQ operator+(const ComplexQ& o) const {
         return ComplexQ(re + o.re, im + o.im);
     }
+    inline ComplexQ operator-(const ComplexQ& o) const {
+        return ComplexQ(re - o.re, im - o.im);
+    }
     inline ComplexQ& operator*=(const ComplexQ& o) {
-        double temp_re = re*o.re - im*o.im;
-        im = re*o.im + im*o.re;
+        qfix temp_re = re*o.re - im*o.im;
+        qfix temp_im = re*o.im + im*o.re;
         re = temp_re;
         return *this;
     }
@@ -73,33 +79,39 @@ inline int Z_eigenvalue_uint(uint32_t s, int q) {
 /**
  * Calculates the classical cost (eigenvalue) H_s for a single bitstring state 's'.
  */
-template<int N>
-double costHamiltonian_uint(uint32_t s, const double d[N][N]);
+template<int N_CITY>
+double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]);
 
 /**
  * Initializes the state vector to the equal superposition state |+>^n.
  */
-template<int N>
-void initialize_equal_superposition(ComplexQ state[CFG::DIM]);
+template<int N_CITY>
+void build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]);
+
+template<int N_CITY>
+bool is_valid_onehot(uint32_t s);
 
 /**
  * Applies the Cost Unitary U_C(gamma) = exp(-i * gamma * H_C) to the state vector.
  */
-template<int N>
-void applyCost_hls(ComplexQ state[CFG::DIM], const double d[N][N], double gamma);
+template<int N_CITY>
+void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], double gamma);
 
 /**
  * Applies the Mixer Unitary U_B(beta) = \prod_q R_X(2*beta)_q to the state vector.
  */
-template<int N>
-void applyMixer_hls(ComplexQ state[CFG::DIM], double beta);
+template<int N_CITY>
+void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta);
 
+
+template<int N_CITY>
+double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY]);
 /**
  * Top-level function for a single QAOA layer (U_B * U_C). (HLS Entry Point)
  */
-template<int N>
-void qaoaStep_hls(ComplexQ state[CFG::DIM],
-                  const double d[N][N],
+template<int N_CITY>
+void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
+                  const double d[N_CITY][N_CITY],
                   double gamma, double beta);
 
 #endif // QAOA_H
