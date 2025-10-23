@@ -115,10 +115,12 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
                   double gamma, double beta);
 
 
-template<int N_CITY>
-void qaoa_kernel(const double d[N_CITY][N_CITY],
+extern "C" {
+void qaoa_kernel(const double d[3][3],
                  double gamma,
                  double beta,
                  double* expectation_out);
+}
+
 
 #endif // QAOA_H

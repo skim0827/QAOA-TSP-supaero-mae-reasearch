@@ -1,6 +1,6 @@
 #include "qaoa.hpp"
 #include <iostream> // Included for HLS debugging/testing context (though not used in final HLS)
-
+# include <hls_math.h>
 
 template<int N_CITY>
 double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
@@ -49,7 +49,7 @@ int build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]) {
     for (int s = 0; s < DIM; ++s) {
         if (is_valid_onehot<N_CITY>(s)) ++count;
     }
-    const double norm = 1.0 / std::sqrt((double)count);
+    const double norm = 1.0 / hls::sqrt((double)count);
     for (int s = 0; s < DIM; ++s) {
         state[s] = is_valid_onehot<N_CITY>(s) ? ComplexQ(norm, 0.0) : ComplexQ(0.0, 0.0);
     }
@@ -75,7 +75,7 @@ void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N
     for (uint32_t s = 0; s < (uint32_t)DIM; s++) {
         double Hs = costHamiltonian<N_CITY>(s, d);
         double ang = gamma * Hs;
-        state[s] *= ComplexQ(std::cos(ang), -std::sin(ang));
+        state[s] *= ComplexQ(hls::cos(ang), -hls::sin(ang));
 
     }
 }
@@ -83,13 +83,13 @@ void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N
 template<int N_CITY>
 void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
     #pragma HLS INLINE off
-    const double c = std::cos(2.0 * beta);
-    const double s = std::sin(2.0 * beta);
+    const double c = hls::cos(2.0 * beta);
+    const double s = hls::sin(2.0 * beta);
     const uint32_t slice_mask = (1u << N_CITY) - 1u;
 
     // Two buffers to ping-pong between
-    static ComplexQ bufA[Config<N_CITY>::DIM];
-    static ComplexQ bufB[Config<N_CITY>::DIM];
+    ComplexQ bufA[Config<N_CITY>::DIM];
+    ComplexQ bufB[Config<N_CITY>::DIM];
 
     // Start in bufA
     
@@ -164,8 +164,8 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_
     applyMixer_hls<N_CITY>(state, beta);
 }
 
-template<int N_CITY>
-void qaoa_kernel(const double d[N_CITY][N_CITY],
+extern "C"
+void qaoa_kernel(const double d[3][3],
                  double gamma,
                  double beta,
                  double* expectation_out) {
@@ -176,12 +176,12 @@ void qaoa_kernel(const double d[N_CITY][N_CITY],
 #pragma HLS INTERFACE s_axilite port=return
 
 
-    ComplexQ state[Config<N_CITY>::DIM];
+    ComplexQ state[Config<3>::DIM];
 #pragma HLS DATAFLOW
 
-    qaoaStep_hls<N_CITY>(state, d, gamma, beta);
+    qaoaStep_hls<3>(state, d, gamma, beta);
 
-    double result = expectation_cost<N_CITY>(state, d);
+    double result = expectation_cost<3>(state, d);
     *expectation_out = result;
 }
 
@@ -191,7 +191,3 @@ template int build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
 template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma);
 template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], double beta);
 template void qaoaStep_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma, double beta);
-template void qaoa_kernel<3>(const double d[3][3],
-                             double gamma,
-                             double beta,
-                             double* expectation_out);

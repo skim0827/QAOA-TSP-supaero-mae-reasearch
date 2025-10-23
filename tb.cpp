@@ -1,4 +1,4 @@
-# include "qaoa.hpp"
+#include "qaoa.hpp"
 # include <iostream>
 
 int main(){
@@ -11,7 +11,7 @@ int main(){
     double beta = 1.5;
     double expectation = 0.0;
 
-    qaoa_kernel<3>(d, gamma, beta, &expectation);
+    qaoa_kernel(d, gamma, beta, &expectation);
     std::cout << "Expectation value = " << expectation << std::endl;
     return 0;
 }
