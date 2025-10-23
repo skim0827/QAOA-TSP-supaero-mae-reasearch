@@ -86,7 +86,7 @@ double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]);
  * Initializes the state vector to the equal superposition state |+>^n.
  */
 template<int N_CITY>
-void build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]);
+int build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]);
 
 template<int N_CITY>
 bool is_valid_onehot(uint32_t s);
@@ -113,5 +113,12 @@ template<int N_CITY>
 void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
                   const double d[N_CITY][N_CITY],
                   double gamma, double beta);
+
+
+template<int N_CITY>
+void qaoa_kernel(const double d[N_CITY][N_CITY],
+                 double gamma,
+                 double beta,
+                 double* expectation_out);
 
 #endif // QAOA_H

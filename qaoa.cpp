@@ -187,7 +187,7 @@ void qaoa_kernel(const double d[N_CITY][N_CITY],
 
 
 template double costHamiltonian<3>(uint32_t s, const double d[3][3]);
-template void build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
+template int build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
 template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma);
 template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], double beta);
 template void qaoaStep_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma, double beta);
