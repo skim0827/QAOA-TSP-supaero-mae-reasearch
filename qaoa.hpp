@@ -1,18 +1,29 @@
 #ifndef QAOA_HPP
 #define QAOA_HPP
-
 #pragma once
 
-#include <cmath>
-#include <cstdint>
-#include <ap_fixed.h>
 
+#ifdef __VITIS_HLS__
+  #include <hls_math.h>
+  #include "ap_fixed.h"
+  typedef ap_fixed<32,12> qfix;
+  #define HLS_PIPELINE
+  #define HLS_UNROLL
+  #define HLS_DATAFLOW
+#else
+  #include <cmath>
+  #define HLS_PIPELINE
+  #define HLS_UNROLL
+  #define HLS_DATAFLOW
+  typedef double qfix;
+#endif
+
+#include <cstdint>
 // Define PI since M_PI is not standard C++
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
 #endif
 
-typedef ap_fixed<32,12> qfix; // example
 // =======================================================
 // 1. Configuration 
 // =======================================================

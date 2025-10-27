@@ -1,6 +1,5 @@
 #include "qaoa.hpp"
 #include <iostream> // Included for HLS debugging/testing context (though not used in final HLS)
-# include <hls_math.h>
 
 template<int N_CITY>
 double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
@@ -8,7 +7,9 @@ double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
     double P  = 500;
 
     for (int i = 0; i < N_CITY; ++i){
+    #ifdef __VITIS_HLS__
     #pragma HLS PIPELINE II=1
+    #endif 
         for (int j = 0; j < N_CITY; ++j){
     #pragma HLS UNROLL
             for (int t = 0; t < N_CITY; ++t){
@@ -43,13 +44,19 @@ double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
 }
 template<int N_CITY>
 int build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]) {
+    #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
+    #endif 
     const int DIM = Config<N_CITY>::DIM;
     int count = 0;
     for (int s = 0; s < DIM; ++s) {
         if (is_valid_onehot<N_CITY>(s)) ++count;
     }
+    #ifdef __VITIS_HLS__
     const double norm = 1.0 / hls::sqrt((double)count);
+    #else
+    const double norm = 1.0 / std::sqrt((double)count);
+    #endif
     for (int s = 0; s < DIM; ++s) {
         state[s] = is_valid_onehot<N_CITY>(s) ? ComplexQ(norm, 0.0) : ComplexQ(0.0, 0.0);
     }
@@ -70,12 +77,18 @@ bool is_valid_onehot(uint32_t s) {
 
 template<int N_CITY>
 void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], double gamma) {
+    #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
+    #endif 
     const int DIM = Config<N_CITY>::DIM;
     for (uint32_t s = 0; s < (uint32_t)DIM; s++) {
         double Hs = costHamiltonian<N_CITY>(s, d);
         double ang = gamma * Hs;
+        #ifdef __VITIS_HLS__
         state[s] *= ComplexQ(hls::cos(ang), -hls::sin(ang));
+        #else
+        state[s] *= ComplexQ(std::cos(ang), -std::sin(ang));
+        #endif
 
     }
 }
@@ -83,8 +96,13 @@ void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N
 template<int N_CITY>
 void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
     #pragma HLS INLINE off
+    #ifdef __VITIS_HLS__
     const double c = hls::cos(2.0 * beta);
     const double s = hls::sin(2.0 * beta);
+    #else
+    const double c = std::cos(2.0 * beta);
+    const double s = std::sin(2.0 * beta);
+    #endif
     const uint32_t slice_mask = (1u << N_CITY) - 1u;
 
     // Two buffers to ping-pong between
@@ -98,9 +116,11 @@ void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
 
     ComplexQ* state_cur  = bufA;
     ComplexQ* state_next = bufB;
+    #ifdef __VITIS_HLS__
     #pragma HLS RESOURCE variable=state core=RAM_2P_BRAM
     #pragma HLS RESOURCE variable=bufA core=RAM_2P_BRAM
     #pragma HLS RESOURCE variable=bufB core=RAM_2P_BRAM
+    #endif 
 
     for (int t = 0; t < N_CITY; ++t) {
         const int base = t * N_CITY;
@@ -146,10 +166,14 @@ void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
 
 template<int N_CITY>
 double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY]){
+    #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
+    #endif 
     double result = 0.0; 
     for (int s = 0; s < Config<N_CITY>::DIM; s++){
+    #ifdef __VITIS_HLS__
     #pragma HLS PIPELINE II=1
+    #endif 
         double prob = state[s].re*state[s].re + state[s].im*state[s].im;
         double Hs = costHamiltonian<N_CITY>(s, d);
         result += prob * Hs;
@@ -169,21 +193,25 @@ void qaoa_kernel(const double d[3][3],
                  double gamma,
                  double beta,
                  double* expectation_out) {
+#ifdef __VITIS_HLS__
 #pragma HLS INTERFACE m_axi     port=d                offset=slave bundle=gmem depth=9
 #pragma HLS INTERFACE m_axi     port=expectation_out  offset=slave bundle=gmem depth=1
-#pragma HLS INTERFACE s_axilite port=gamma
-#pragma HLS INTERFACE s_axilite port=beta
-#pragma HLS INTERFACE s_axilite port=return
-
+#pragma HLS INTERFACE s_axilite port=gamma            bundle=control
+#pragma HLS INTERFACE s_axilite port=beta             bundle=control
+#pragma HLS INTERFACE s_axilite port=return           bundle=control
+#endif 
 
     ComplexQ state[Config<3>::DIM];
+#ifdef __VITIS_HLS__
 #pragma HLS DATAFLOW
+#endif 
 
     qaoaStep_hls<3>(state, d, gamma, beta);
 
     double result = expectation_cost<3>(state, d);
     *expectation_out = result;
 }
+
 
 
 template double costHamiltonian<3>(uint32_t s, const double d[3][3]);
