@@ -116,21 +116,21 @@ void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta);
 
 
 template<int N_CITY>
-double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY]);
+double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], uint32_t *best_state);
 /**
  * Top-level function for a single QAOA layer (U_B * U_C). (HLS Entry Point)
  */
-template<int N_CITY>
+template<int N_CITY, int P>
 void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
                   const double d[N_CITY][N_CITY],
-                  double gamma, double beta);
+                  const double gamma[P],
+                  const double beta[P]);
 
-
-extern "C" {
+extern "C"
 double qaoa_kernel(const double d[3][3],
-                 double gamma,
-                 double beta);
-}
-
+                   const double gamma[3],
+                   const double beta[3],
+                   bool get_best_state,
+                   uint32_t *best_state);
 
 #endif // QAOA_H

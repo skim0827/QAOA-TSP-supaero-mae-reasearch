@@ -4,7 +4,7 @@
 template<int N_CITY>
 double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
     double H = 0.0;
-    double P  = 500;
+    double P  = 30;
 
     for (int i = 0; i < N_CITY; ++i){
     #ifdef __VITIS_HLS__
@@ -165,11 +165,13 @@ void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
 }
 
 template<int N_CITY>
-double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY]){
+double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], uint32_t *best_state){
     #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
     #endif 
     double result = 0.0; 
+    double max_prob = -1.0;
+    uint32_t argmax = 0; 
     for (int s = 0; s < Config<N_CITY>::DIM; s++){
     #ifdef __VITIS_HLS__
     #pragma HLS PIPELINE II=1
@@ -178,41 +180,64 @@ double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CI
         double Hs = costHamiltonian<N_CITY>(s, d);
         result += prob * Hs;
 
+        if (prob >  max_prob) {
+            max_prob = prob ;
+            argmax = (uint32_t) s;
+        }
+
     }
+
+    *best_state = argmax; 
     return result ; 
 }
-template<int N_CITY>
-void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], double gamma, double beta){
+template<int N_CITY, int P>
+void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], const double gamma[P], const double beta[P]){
     build_feasible_superposition<N_CITY>(state);
-    applyCost_hls<N_CITY>(state, d, gamma);
-    applyMixer_hls<N_CITY>(state, beta);
+
+    // apply P layers 
+    for (int p = 0; p < P; ++p) {
+        applyCost_hls<N_CITY>(state, d, gamma[p]);
+        applyMixer_hls<N_CITY>(state, beta[p]);        
+    }
 }
 
 extern "C"
 double qaoa_kernel(const double d[3][3],
-                   double gamma,
-                   double beta) {
-#pragma HLS INTERFACE s_axilite port=return bundle=control
-#pragma HLS INTERFACE s_axilite port=d      bundle=control
-#pragma HLS INTERFACE s_axilite port=gamma  bundle=control
-#pragma HLS INTERFACE s_axilite port=beta   bundle=control
+                   const double gamma[3],
+                   const double beta[3],
+                   bool get_best_state,
+                   uint32_t *best_state) {
+#pragma HLS INTERFACE s_axilite port=return         bundle=control
+#pragma HLS INTERFACE s_axilite port=d              bundle=control
+#pragma HLS INTERFACE s_axilite port=gamma          bundle=control
+#pragma HLS INTERFACE s_axilite port=beta           bundle=control
+#pragma HLS INTERFACE s_axilite port=get_best_state bundle=control
+#pragma HLS INTERFACE s_axilite port=best_state     bundle=control
+
 
     ComplexQ state[Config<3>::DIM];
 
 #pragma HLS DATAFLOW
 
-    qaoaStep_hls<3>(state, d, gamma, beta);
+    qaoaStep_hls<3, 3>(state, d, gamma, beta); 
 
-    double result = expectation_cost<3>(state, d);
-    return result;
+    if (get_best_state) {
+        return expectation_cost<3>(state, d, best_state);
+    } else {
+        uint32_t dummy;
+        return expectation_cost<3>(state, d, &dummy);
+    }
 }
 
 
 
 
 
-template double costHamiltonian<3>(uint32_t s, const double d[3][3]);
-template int build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
-template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma);
-template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], double beta);
-template void qaoaStep_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma, double beta);
+// template double costHamiltonian<3>(uint32_t s, const double d[3][3]);
+// template int build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
+// template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma);
+// template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], double beta);
+// template void qaoaStep_hls<3,2>(ComplexQ state[Config<3>::DIM],
+//                                 const double d[3][3],
+//                                 const double gamma[2],
+//                                 const double beta[2]);
