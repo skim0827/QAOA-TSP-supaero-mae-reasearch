@@ -20,3 +20,8 @@ Choi S., Lee K., Lee J.-J., Lee W. (2025). *Standalone FPGA-Based QAOA Emulator 
 - generate Vitis HLS IP 
 - Vivado System Architecture 
 - Test on FPGA (Zybo Legacy)
+
+## Maths 
+$$
+C(x) = \sum_{i,j} w_{ij} \sum_{p} x_{i,p} x_{j,p+1}
+$$
