@@ -13,5 +13,5 @@ The Traveling Salesman Problem is a standard NP-hard benchmark with a clear comb
  	[Standalone FPGA-Based QAOA Emulator for Weighted-MaxCut on Embedded Devices](https://arxiv.org/abs/2502.11316)
 
 ## FPGA - CPU Architecture 
-![Overall Architecture](images/architecture_rp.png)
+![Overall Architecture](image/architecture_rp.png)
 
