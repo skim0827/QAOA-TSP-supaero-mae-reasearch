@@ -37,7 +37,7 @@ Quantum Encoding :
 $$
 x_{i,p} \rightarrow \hat{x}_{i,p} = \frac{1 - \hat{Z}_{(i,p)}}{2}
 $$
----
+
 ### Mixer Unitary  
 Mixer Hamiltonion : Single Qubit Rotations about the X-Axis 
 $$
@@ -53,7 +53,7 @@ R_X(2\beta_k) =
 -i\sin(\beta_k) & \cos(\beta_k)
 \end{pmatrix}
 $$
----
+
 ### QAOA Step 
 $$
 U_M(\beta_k) U_C(\gamma_k) = \left(H^{\otimes n} D_M \right) \left(H^{\otimes n} D_C \right)
@@ -68,20 +68,15 @@ $$
 D_M(l, l) = e^{i \beta_k (2HW(l-1) - n)} 
 $$
 
----
-
 ### Expectation 
 
 $$
 \langle C \rangle = \langle \psi(\theta) | H_C | \psi(\theta) \rangle
 $$
 
----
-
 ### State Vector Calculation
 
 $$
-
 \langle C \rangle_{\boldsymbol{\gamma}, \boldsymbol{\beta}}
 =
 \langle \psi^{(P)}(\boldsymbol{\gamma}, \boldsymbol{\beta}) |
