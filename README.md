@@ -67,17 +67,25 @@ $$
 $$
 D_M(l, l) = e^{i \beta_k (2HW(l-1) - n)} 
 $$
+
 ---
+
 ### Expectation 
+
 $$
 \langle C \rangle = \langle \psi(\theta) | H_C | \psi(\theta) \rangle
 $$
+
 ---
+
 ### State Vector Calculation
+
 $$
+
 \langle C \rangle_{\boldsymbol{\gamma}, \boldsymbol{\beta}}
 =
 \langle \psi^{(P)}(\boldsymbol{\gamma}, \boldsymbol{\beta}) |
 \, H_C \,
 | \psi^{(P)}(\boldsymbol{\gamma}, \boldsymbol{\beta}) \rangle
 $$
+
