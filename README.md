@@ -22,6 +22,62 @@ Choi S., Lee K., Lee J.-J., Lee W. (2025). *Standalone FPGA-Based QAOA Emulator 
 - Test on FPGA (Zybo Legacy)
 
 ## Maths 
+### Cost Function 
+Cost function for TSP : 
 $$
-C(x) = \sum_{i,j} w_{ij} \sum_{p} x_{i,p} x_{j,p+1}
+H_{\text{cost}} = \sum_{t = 0}^{n-1} \sum_{j = 0}^{n-1} \sum_{i = 0}^{n-1} d_{i, j} x_{i,t} x_{j,t + 1} + A \sum_{i=0}^{n-1} \left(1 - \sum_{t=0}^{n-1} x_{i,t} \right)^2 + A \sum_{t=0}^{n-1} \left(1 - \sum_{i=0}^{n-1} x_{i,t} \right)^2
+$$
+
+Quantum Encoding : 
+$$
+x_{i,p} \rightarrow \hat{x}_{i,p} = \frac{1 - \hat{Z}_{i,p}}{2}
+$$
+
+### Mixer Unitary  
+Mixer Hamiltonion : Single Qubit Rotations about the X-Axis 
+$$
+U_M(\beta_k) = R_X(2\beta_k)^{\otimes n} = (H \Lambda_M H)^{\otimes n} 
+= H^{\otimes n} D_M H^{\otimes n}
+$$
+Decomposition of Mixer Hamiltonion : 
+$$
+R_X(2\beta_k) = \begin{bmatrix}
+1 & 1 \\
+1 & -1
+\end{bmatrix} \begin{bmatrix}
+e^{-i\beta_k} & 0 \\
+0 & e^{i\beta_k}
+\end{bmatrix} \begin{bmatrix}
+1 & 1 \\
+1 & -1
+\end{bmatrix}^{-1} = H \Lambda_M H
+$$
+
+### QAOA Step 
+$$
+U_M(\beta_k) U_C(\gamma_k) = \left(H^{\otimes n} D_M \right) \left(H^{\otimes n} D_C \right)
+$$
+
+where 
+$$
+D_C = U_C(\gamma_k) = e^{-i \gamma_k \hat{H}_C} = \sum_{k=0}^{\infty} \frac{(-i \gamma_k)^m}{m!} \hat{H}_C^m
+$$
+
+$$
+D_M(l, l) = e^{i \beta_k (2HW(l-1) - n)} 
+$$
+
+
+### Expectation 
+$$
+\langle C \rangle = \langle \psi (\theta) \vert H_c \vert \psi (\theta) \rangle
+$$
+
+### State Vector Calculation 
+$$
+\langle C \rangle_{\boldsymbol{\gamma},\boldsymbol{\beta}}
+=
+\bra{\psi^{(P)}(\boldsymbol{\gamma},\boldsymbol{\beta})}
+\, H_C \,
+\ket{\psi^{(P)}(\boldsymbol{\gamma},\boldsymbol{\beta})}
 $$
