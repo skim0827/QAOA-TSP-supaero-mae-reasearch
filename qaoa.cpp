@@ -190,19 +190,16 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_
 
 extern "C"
 double qaoa_kernel(const double d[3][3],
-                 double gamma,
-                 double beta,
-                 double* expectation_out) {
-#ifdef __VITIS_HLS__
-#pragma HLS INTERFACE s_axilite port=return         bundle=control
-#pragma HLS INTERFACE s_axilite port=d              bundle=control
-#pragma HLS INTERFACE s_axilite port=gamma          bundle=control
-#pragma HLS INTERFACE s_axilite port=beta           bundle=control
-#endif 
+                   double gamma,
+                   double beta) {
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+#pragma HLS INTERFACE s_axilite port=d      bundle=control
+#pragma HLS INTERFACE s_axilite port=gamma  bundle=control
+#pragma HLS INTERFACE s_axilite port=beta   bundle=control
+
     ComplexQ state[Config<3>::DIM];
-#ifdef __VITIS_HLS__
+
 #pragma HLS DATAFLOW
-#endif 
 
     qaoaStep_hls<3>(state, d, gamma, beta);
 
