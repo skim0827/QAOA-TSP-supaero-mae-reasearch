@@ -25,32 +25,33 @@ Choi S., Lee K., Lee J.-J., Lee W. (2025). *Standalone FPGA-Based QAOA Emulator 
 ### Cost Function 
 Cost function for TSP : 
 $$
-H_{\text{cost}} = \sum_{t = 0}^{n-1} \sum_{j = 0}^{n-1} \sum_{i = 0}^{n-1} d_{i, j} x_{i,t} x_{j,t + 1} + A \sum_{i=0}^{n-1} \left(1 - \sum_{t=0}^{n-1} x_{i,t} \right)^2 + A \sum_{t=0}^{n-1} \left(1 - \sum_{i=0}^{n-1} x_{i,t} \right)^2
+H_{\text{cost}} = 
+\sum_{t=0}^{n-1} \sum_{j=0}^{n-1} \sum_{i=0}^{n-1} d_{i,j}\, x_{i,t}\, x_{j,t+1}
++ 
+A \sum_{i=0}^{n-1} \left(1 - \sum_{t=0}^{n-1} x_{i,t}\right)^2
++
+A \sum_{t=0}^{n-1} \left(1 - \sum_{i=0}^{n-1} x_{i,t}\right)^2
 $$
 
 Quantum Encoding : 
 $$
-x_{i,p} \rightarrow \hat{x}_{i,p} = \frac{1 - \hat{Z}_{i,p}}{2}
+x_{i,p} \rightarrow \hat{x}_{i,p} = \frac{1 - \hat{Z}_{(i,p)}}{2}
 $$
-
+---
 ### Mixer Unitary  
 Mixer Hamiltonion : Single Qubit Rotations about the X-Axis 
 $$
-U_M(\beta_k) = R_X(2\beta_k)^{\otimes n} = (H \Lambda_M H)^{\otimes n} 
-= H^{\otimes n} D_M H^{\otimes n}
+U_M(\beta_k) = R_X(2\beta_k)^{\otimes n}
 $$
+
 Decomposition of Mixer Hamiltonion : 
+
 $$
-R_X(2\beta_k) = \begin{bmatrix}
-1 & 1 \\
-1 & -1
-\end{bmatrix} \begin{bmatrix}
-e^{-i\beta_k} & 0 \\
-0 & e^{i\beta_k}
-\end{bmatrix} \begin{bmatrix}
-1 & 1 \\
-1 & -1
-\end{bmatrix}^{-1} = H \Lambda_M H
+R_X(2\beta_k) =
+\begin{pmatrix}
+\cos(\beta_k) & -i\sin(\beta_k) \\
+-i\sin(\beta_k) & \cos(\beta_k)
+\end{pmatrix}
 $$
 
 ### QAOA Step 
@@ -70,14 +71,16 @@ $$
 
 ### Expectation 
 $$
-\langle C \rangle = \langle \psi (\theta) \vert H_c \vert \psi (\theta) \rangle
+\langle C \rangle = \langle \psi(\theta) | H_C | \psi(\theta) \rangle
 $$
 
+
 ### State Vector Calculation 
+
 $$
-\langle C \rangle_{\boldsymbol{\gamma},\boldsymbol{\beta}}
+\langle C \rangle_{\boldsymbol{\gamma}, \boldsymbol{\beta}}
 =
-\bra{\psi^{(P)}(\boldsymbol{\gamma},\boldsymbol{\beta})}
+\langle \psi^{(P)}(\boldsymbol{\gamma}, \boldsymbol{\beta}) |
 \, H_C \,
-\ket{\psi^{(P)}(\boldsymbol{\gamma},\boldsymbol{\beta})}
+| \psi^{(P)}(\boldsymbol{\gamma}, \boldsymbol{\beta}) \rangle
 $$
