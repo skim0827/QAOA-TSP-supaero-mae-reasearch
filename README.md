@@ -16,3 +16,7 @@ Choi S., Lee K., Lee J.-J., Lee W. (2025). *Standalone FPGA-Based QAOA Emulator 
 ## FPGA - CPU Architecture 
 ![Overall Architecture](image/architecture_rp.png)
 
+## To Do
+- generate Vitis HLS IP 
+- Vivado System Architecture 
+- Test on FPGA (Zybo Legacy)
