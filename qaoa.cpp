@@ -2,9 +2,9 @@
 #include <iostream> // Included for HLS debugging/testing context (though not used in final HLS)
 
 template<int N_CITY>
-double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
-    double H = 0.0;
-    double P  = 30;
+qfix costHamiltonian(uint32_t s, const qfix d[N_CITY][N_CITY]){
+    qfix H = 0.0;
+    qfix P  = 30;
 
     for (int i = 0; i < N_CITY; ++i){
     #ifdef __VITIS_HLS__
@@ -16,7 +16,7 @@ double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
                 int next_t = (t + 1) % N_CITY;
                 int Z_i_t = Z_eigenvalue_uint(s, (t*N_CITY) + i);
                 int Z_j_t_1 = Z_eigenvalue_uint(s, (next_t*N_CITY) + j);
-                H += d[i][j] * 0.25 * (1.0 - Z_i_t) * (1.0 - Z_j_t_1);
+                H += d[i][j] * qfix(0.25) * (qfix(1) - Z_i_t) * (qfix(1) - Z_j_t_1);
 
             }
         }
@@ -25,19 +25,19 @@ double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]){
     // std::cout << "distance contribution = " << H << std::endl;
 
     for (int i=0; i < N_CITY; i++) {
-        double X_sum = 0.0;
+        qfix X_sum = 0.0;
         for (int t=0; t < N_CITY; t++) {
-            X_sum += 0.5 * (1.0 - Z_eigenvalue_uint(s, t*N_CITY + i));
+            X_sum += qfix(0.5) * (qfix(1) - Z_eigenvalue_uint(s, t*N_CITY + i));
         }
-        H += P * (X_sum - 1.0) * (X_sum - 1.0); 
+        H += P * (X_sum - qfix(1)) * (X_sum - qfix(1)); 
     }
 
     for (int t=0; t < N_CITY ; t++) {
-        double X_sum = 0.0;
+        qfix X_sum = 0.0;
         for (int i=0; i < N_CITY; i++) {
-            X_sum += 0.5 * (1.0 - Z_eigenvalue_uint(s, t*N_CITY + i));
+            X_sum +=qfix(0.5)* (qfix(1) - Z_eigenvalue_uint(s, t*N_CITY + i));
         }
-        H += P * (X_sum - 1.0) * (X_sum - 1.0);
+        H += P * (X_sum - qfix(1) ) * (X_sum - qfix(1) );
     }
     
     return H;
@@ -53,9 +53,9 @@ int build_feasible_superposition(ComplexQ state[Config<N_CITY>::DIM]) {
         if (is_valid_onehot<N_CITY>(s)) ++count;
     }
     #ifdef __VITIS_HLS__
-    const double norm = 1.0 / hls::sqrt((double)count);
+    const qfix norm = qfix(1) / hls::sqrt((qfix)count);
     #else
-    const double norm = 1.0 / std::sqrt((double)count);
+    const qfix norm = qfix(1) / std::sqrt((qfix)count);
     #endif
     for (int s = 0; s < DIM; ++s) {
         state[s] = is_valid_onehot<N_CITY>(s) ? ComplexQ(norm, 0.0) : ComplexQ(0.0, 0.0);
@@ -76,14 +76,16 @@ bool is_valid_onehot(uint32_t s) {
 }
 
 template<int N_CITY>
-void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], double gamma) {
+void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], 
+                    const qfix d[N_CITY][N_CITY], 
+                    qfix gamma) {
     #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
     #endif 
     const int DIM = Config<N_CITY>::DIM;
     for (uint32_t s = 0; s < (uint32_t)DIM; s++) {
-        double Hs = costHamiltonian<N_CITY>(s, d);
-        double ang = gamma * Hs;
+        qfix Hs = costHamiltonian<N_CITY>(s, d);
+        qfix ang = gamma * Hs;
         #ifdef __VITIS_HLS__
         state[s] *= ComplexQ(hls::cos(ang), -hls::sin(ang));
         #else
@@ -94,14 +96,14 @@ void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N
 }
 
 template<int N_CITY>
-void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
+void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], qfix beta) {
     #pragma HLS INLINE off
     #ifdef __VITIS_HLS__
-    const double c = hls::cos(2.0 * beta);
-    const double s = hls::sin(2.0 * beta);
+    const qfix c = hls::cos(qfix(2) * beta);
+    const qfix s = hls::sin(qfix(2) * beta);
     #else
-    const double c = std::cos(2.0 * beta);
-    const double s = std::sin(2.0 * beta);
+    const qfix c = std::cos(2.0 * beta);
+    const qfix s = std::sin(2.0 * beta);
     #endif
     const uint32_t slice_mask = (1u << N_CITY) - 1u;
 
@@ -165,19 +167,19 @@ void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta) {
 }
 
 template<int N_CITY>
-double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], uint32_t *best_state){
+qfix expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const qfix d[N_CITY][N_CITY], uint32_t *best_state){
     #ifdef __VITIS_HLS__
     #pragma HLS INLINE off
     #endif 
-    double result = 0.0; 
-    double max_prob = -1.0;
+    qfix result = 0.0; 
+    qfix max_prob = -1.0;
     uint32_t argmax = 0; 
     for (int s = 0; s < Config<N_CITY>::DIM; s++){
     #ifdef __VITIS_HLS__
     #pragma HLS PIPELINE II=1
     #endif 
-        double prob = state[s].re*state[s].re + state[s].im*state[s].im;
-        double Hs = costHamiltonian<N_CITY>(s, d);
+        qfix prob = state[s].re*state[s].re + state[s].im*state[s].im;
+        qfix Hs = costHamiltonian<N_CITY>(s, d);
         result += prob * Hs;
 
         if (prob >  max_prob) {
@@ -190,8 +192,9 @@ double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CI
     *best_state = argmax; 
     return result ; 
 }
+
 template<int N_CITY, int P>
-void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], const double gamma[P], const double beta[P]){
+void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const qfix d[N_CITY][N_CITY], const qfix gamma[P], const qfix beta[P]){
     build_feasible_superposition<N_CITY>(state);
 
     // apply P layers 
@@ -202,9 +205,9 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_
 }
 
 extern "C"
-double qaoa_kernel(const double d[3][3],
-                   const double gamma[3],
-                   const double beta[3],
+float qaoa_kernel(const qfix d[3][3],
+                   const qfix gamma[1],
+                   const qfix beta[1],
                    bool get_best_state,
                    uint32_t *best_state) {
 #pragma HLS INTERFACE s_axilite port=return         bundle=control
@@ -219,13 +222,13 @@ double qaoa_kernel(const double d[3][3],
 
 #pragma HLS DATAFLOW
 
-    qaoaStep_hls<3, 3>(state, d, gamma, beta); 
+    qaoaStep_hls<3, 1>(state, d, gamma, beta); 
 
     if (get_best_state) {
-        return expectation_cost<3>(state, d, best_state);
+        return (float)expectation_cost<3>(state, d, best_state);
     } else {
         uint32_t dummy;
-        return expectation_cost<3>(state, d, &dummy);
+        return (float)expectation_cost<3>(state, d, &dummy);
     }
 }
 
@@ -233,11 +236,11 @@ double qaoa_kernel(const double d[3][3],
 
 
 
-// template double costHamiltonian<3>(uint32_t s, const double d[3][3]);
+// template qfix costHamiltonian<3>(uint32_t s, const qfix d[3][3]);
 // template int build_feasible_superposition<3>(ComplexQ state[Config<3>::DIM]);
-// template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const double d[3][3], double gamma);
-// template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], double beta);
+// template void applyCost_hls<3>(ComplexQ state[Config<3>::DIM], const qfix d[3][3], qfix gamma);
+// template void applyMixer_hls<3>(ComplexQ state[Config<3>::DIM], qfix beta);
 // template void qaoaStep_hls<3,2>(ComplexQ state[Config<3>::DIM],
-//                                 const double d[3][3],
-//                                 const double gamma[2],
-//                                 const double beta[2]);
+//                                 const qfix d[3][3],
+//                                 const qfix gamma[2],
+//                                 const qfix beta[2]);

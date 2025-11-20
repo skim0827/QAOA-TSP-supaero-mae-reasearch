@@ -91,7 +91,7 @@ inline int Z_eigenvalue_uint(uint32_t s, int q) {
  * Calculates the classical cost (eigenvalue) H_s for a single bitstring state 's'.
  */
 template<int N_CITY>
-double costHamiltonian(uint32_t s, const double d[N_CITY][N_CITY]);
+qfix costHamiltonian(uint32_t s, const qfix d[N_CITY][N_CITY]);
 
 /**
  * Initializes the state vector to the equal superposition state |+>^n.
@@ -106,30 +106,35 @@ bool is_valid_onehot(uint32_t s);
  * Applies the Cost Unitary U_C(gamma) = exp(-i * gamma * H_C) to the state vector.
  */
 template<int N_CITY>
-void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], double gamma);
+void applyCost_hls(ComplexQ state[Config<N_CITY>::DIM], 
+                    const qfix d[N_CITY][N_CITY], 
+                    qfix gamma);
 
 /**
  * Applies the Mixer Unitary U_B(beta) = \prod_q R_X(2*beta)_q to the state vector.
  */
 template<int N_CITY>
-void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], double beta);
+void applyMixer_hls(ComplexQ state[Config<N_CITY>::DIM], 
+                    qfix beta);
 
 
 template<int N_CITY>
-double expectation_cost(ComplexQ state[Config<N_CITY>::DIM], const double d[N_CITY][N_CITY], uint32_t *best_state);
+qfix expectation_cost(ComplexQ state[Config<N_CITY>::DIM], 
+                        const qfix d[N_CITY][N_CITY], 
+                        uint32_t *best_state);
 /**
  * Top-level function for a single QAOA layer (U_B * U_C). (HLS Entry Point)
  */
 template<int N_CITY, int P>
 void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
-                  const double d[N_CITY][N_CITY],
-                  const double gamma[P],
-                  const double beta[P]);
+                  const qfix d[N_CITY][N_CITY],
+                  const qfix gamma[P],
+                  const qfix beta[P]);
 
 extern "C"
-double qaoa_kernel(const double d[3][3],
-                   const double gamma[3],
-                   const double beta[3],
+float qaoa_kernel(const qfix d[3][3],
+                   const qfix gamma[1],
+                   const qfix beta[1],
                    bool get_best_state,
                    uint32_t *best_state);
 
