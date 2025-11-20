@@ -24,11 +24,12 @@ Choi S., Lee K., Lee J.-J., Lee W. (2025). *Standalone FPGA-Based QAOA Emulator 
 
 ## Maths 
 ### Cost Function 
-Cost Function for TSP : 
+Cost Function for TSP:
+
 $$
 H_{\text{cost}} =
 \sum_{t=0}^{n-1} \sum_{j=0}^{n-1} \sum_{i=0}^{n-1}
-d_{i,j}\, x_{i,t}\, x_{j,t+1}
+d_{i,j} \, x_{i,t} \, x_{j,t+1}
 + A \sum_{i=0}^{n-1} \left(1 - \sum_{t=0}^{n-1} x_{i,t}\right)^2
 + A \sum_{t=0}^{n-1} \left(1 - \sum_{i=0}^{n-1} x_{i,t}\right)^2
 $$
