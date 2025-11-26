@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/qaoa_kernel.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Nov 20 16:57:08 2025",
+ "timestampMillis": "1763654228670",
+ "buildStep": {
+  "cmdId": "af5306d9-8d40-4e4d-a669-229331045020",
+  "name": "v++",
+  "logFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/logs/qaoa_kernel.steps.log",
+  "commandLine": "/usr/local/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg --work_dir qaoa_kernel ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg",
+   "--work_dir",
+   "qaoa_kernel"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg",
+    "content": "part=xc7z010clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=qaoa_kernel\nclock=10ns\nclock_uncertainty=20%\ntb.file=/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/tb.cpp\ncsim.code_analyzer=1\nsyn.file=/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp\nsyn.file=/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp"
+   }
+  ],
+  "cwd": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:57:08 2025",
+ "timestampMillis": "1763654228671",
+ "status": {
+  "cmdId": "af5306d9-8d40-4e4d-a669-229331045020",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233525",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "qaoa_kernel",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+     "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233525",
+ "buildStep": {
+  "cmdId": "69be6f88-792b-4065-b7bc-7ab383903c20",
+  "name": "",
+  "logFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233525",
+ "status": {
+  "cmdId": "69be6f88-792b-4065-b7bc-7ab383903c20",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233525",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233526",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:13 2025",
+ "timestampMillis": "1763654233526",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278039",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278040",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278040",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278040",
+ "status": {
+  "cmdId": "69be6f88-792b-4065-b7bc-7ab383903c20",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278230",
+ "status": {
+  "cmdId": "af5306d9-8d40-4e4d-a669-229331045020",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278237",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/reports/v++_compile_qaoa_kernel_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:57:58 2025",
+ "timestampMillis": "1763654278242",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/reports/.db/v++_compile_qaoa_kernel_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,3 @@
+relativeroot=/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa
+original_argv=--mode hls --package --config /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg --work_dir qaoa_kernel 
+

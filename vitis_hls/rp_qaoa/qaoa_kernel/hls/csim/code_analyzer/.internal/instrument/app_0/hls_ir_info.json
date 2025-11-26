@@ -1,0 +1,415 @@
+{
+    "top_level_hw_fn_id": 242,
+    "functions": {
+        "200": {
+            "fn_id": 200,
+            "mangled_name": "_GLOBAL__sub_I_tb.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_tb",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "201": {
+            "fn_id": 201,
+            "mangled_name": "__cxx_global_var_init",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/tb.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "236": {
+            "fn_id": 236,
+            "mangled_name": "_GLOBAL__sub_I_qaoa.cpp",
+            "fully_qualified_name": "_GLOBAL__sub_I_qaoa",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "237": {
+            "fn_id": 237,
+            "mangled_name": "__cxx_global_var_init.2",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "238": {
+            "fn_id": 238,
+            "mangled_name": "_GLOBAL__sub_I_qaoa.cpp.5",
+            "fully_qualified_name": "_GLOBAL__sub_I_qaoa",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "239": {
+            "fn_id": 239,
+            "mangled_name": "__cxx_global_var_init.6",
+            "fully_qualified_name": "__cxx_global_var_init",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 0,
+                "column": 0
+            }
+        },
+        "240": {
+            "fn_id": 240,
+            "mangled_name": "__dtor__ZStL8__ioinit",
+            "fully_qualified_name": "__dtor__ZStL8__ioinit",
+            "is_sys": true,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/usr/local/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/include/c++/8.3.0/iostream",
+                "line": 74,
+                "column": 0
+            }
+        },
+        "242": {
+            "fn_id": 242,
+            "mangled_name": "qaoa_kernel",
+            "fully_qualified_name": "qaoa_kernel",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 208,
+                "column": 1
+            }
+        },
+        "243": {
+            "fn_id": 243,
+            "mangled_name": "_ZN8ComplexQC1Ev",
+            "fully_qualified_name": "ComplexQ::ComplexQ",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 51,
+                "column": 5
+            }
+        },
+        "244": {
+            "fn_id": 244,
+            "mangled_name": "_Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__KdPS2_S5_",
+            "fully_qualified_name": "qaoaStep_hls<3, 1>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 197,
+                "column": 1
+            }
+        },
+        "245": {
+            "fn_id": 245,
+            "mangled_name": "_Z16expectation_costILi3EEdP8ComplexQPAT__KdPj",
+            "fully_qualified_name": "expectation_cost<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 170,
+                "column": 1
+            }
+        },
+        "246": {
+            "fn_id": 246,
+            "mangled_name": "_Z15costHamiltonianILi3EEdjPAT__Kd",
+            "fully_qualified_name": "costHamiltonian<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 5,
+                "column": 1
+            }
+        },
+        "247": {
+            "fn_id": 247,
+            "mangled_name": "_Z17Z_eigenvalue_uintji",
+            "fully_qualified_name": "Z_eigenvalue_uint",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 82,
+                "column": 1
+            }
+        },
+        "248": {
+            "fn_id": 248,
+            "mangled_name": "_Z28build_feasible_superpositionILi3EEiP8ComplexQ",
+            "fully_qualified_name": "build_feasible_superposition<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 46,
+                "column": 1
+            }
+        },
+        "249": {
+            "fn_id": 249,
+            "mangled_name": "_Z13applyCost_hlsILi3EEvP8ComplexQPAT__Kdd",
+            "fully_qualified_name": "applyCost_hls<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 79,
+                "column": 1
+            }
+        },
+        "250": {
+            "fn_id": 250,
+            "mangled_name": "_Z14applyMixer_hlsILi3EEvP8ComplexQd",
+            "fully_qualified_name": "applyMixer_hls<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 99,
+                "column": 1
+            }
+        },
+        "251": {
+            "fn_id": 251,
+            "mangled_name": "_ZN8ComplexQC1Edd",
+            "fully_qualified_name": "ComplexQ::ComplexQ",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 52,
+                "column": 5
+            }
+        },
+        "252": {
+            "fn_id": 252,
+            "mangled_name": "_ZNK8ComplexQmlERKS_",
+            "fully_qualified_name": "ComplexQ::operator*",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 55,
+                "column": 5
+            }
+        },
+        "253": {
+            "fn_id": 253,
+            "mangled_name": "_ZNK8ComplexQmiERKS_",
+            "fully_qualified_name": "ComplexQ::operator-",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 61,
+                "column": 5
+            }
+        },
+        "254": {
+            "fn_id": 254,
+            "mangled_name": "_ZNK8ComplexQplERKS_",
+            "fully_qualified_name": "ComplexQ::operator+",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 58,
+                "column": 5
+            }
+        },
+        "255": {
+            "fn_id": 255,
+            "mangled_name": "_ZN8ComplexQC2Edd",
+            "fully_qualified_name": "ComplexQ::ComplexQ",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 52,
+                "column": 5
+            }
+        },
+        "256": {
+            "fn_id": 256,
+            "mangled_name": "_ZN8ComplexQmLERKS_",
+            "fully_qualified_name": "ComplexQ::operator*=",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 64,
+                "column": 5
+            }
+        },
+        "257": {
+            "fn_id": 257,
+            "mangled_name": "_Z15is_valid_onehotILi3EEbj",
+            "fully_qualified_name": "is_valid_onehot<3>",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": true,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+                "line": 67,
+                "column": 1
+            }
+        },
+        "258": {
+            "fn_id": 258,
+            "mangled_name": "_ZN8ComplexQC2Ev",
+            "fully_qualified_name": "ComplexQ::ComplexQ",
+            "is_sys": false,
+            "is_declaration": false,
+            "supports_dataflow": false,
+            "src_loc": {
+                "file": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp",
+                "line": 51,
+                "column": 5
+            }
+        }
+    },
+    "loops": {
+        "2": {
+            "fn_id": 242,
+            "lp_id": 2
+        },
+        "3": {
+            "fn_id": 244,
+            "lp_id": 3
+        },
+        "4": {
+            "fn_id": 245,
+            "lp_id": 4
+        },
+        "5": {
+            "fn_id": 246,
+            "lp_id": 5
+        },
+        "6": {
+            "fn_id": 246,
+            "lp_id": 6
+        },
+        "7": {
+            "fn_id": 246,
+            "lp_id": 7
+        },
+        "8": {
+            "fn_id": 246,
+            "lp_id": 8
+        },
+        "9": {
+            "fn_id": 246,
+            "lp_id": 9
+        },
+        "10": {
+            "fn_id": 246,
+            "lp_id": 10
+        },
+        "11": {
+            "fn_id": 246,
+            "lp_id": 11
+        },
+        "12": {
+            "fn_id": 248,
+            "lp_id": 12
+        },
+        "13": {
+            "fn_id": 248,
+            "lp_id": 13
+        },
+        "14": {
+            "fn_id": 249,
+            "lp_id": 14
+        },
+        "15": {
+            "fn_id": 250,
+            "lp_id": 15
+        },
+        "16": {
+            "fn_id": 250,
+            "lp_id": 16
+        },
+        "17": {
+            "fn_id": 250,
+            "lp_id": 17
+        },
+        "18": {
+            "fn_id": 250,
+            "lp_id": 18
+        },
+        "19": {
+            "fn_id": 250,
+            "lp_id": 19
+        },
+        "20": {
+            "fn_id": 250,
+            "lp_id": 20
+        },
+        "21": {
+            "fn_id": 250,
+            "lp_id": 21
+        },
+        "22": {
+            "fn_id": 250,
+            "lp_id": 22
+        },
+        "23": {
+            "fn_id": 250,
+            "lp_id": 23
+        },
+        "24": {
+            "fn_id": 257,
+            "lp_id": 24
+        },
+        "25": {
+            "fn_id": 257,
+            "lp_id": 25
+        }
+    }
+}

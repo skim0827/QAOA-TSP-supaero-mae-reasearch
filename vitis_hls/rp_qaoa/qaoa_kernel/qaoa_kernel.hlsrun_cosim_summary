@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/qaoa_kernel.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Nov 20 16:58:58 2025",
+ "timestampMillis": "1763654338247",
+ "buildStep": {
+  "cmdId": "5e744d64-3c3c-4963-8c64-6255b3d5fb0a",
+  "name": "vitis-run",
+  "logFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/logs/qaoa_kernel.steps.log",
+  "commandLine": "/usr/local/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg --work_dir qaoa_kernel ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/hls_config.cfg",
+   "--work_dir",
+   "qaoa_kernel"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:58:58 2025",
+ "timestampMillis": "1763654338249",
+ "status": {
+  "cmdId": "5e744d64-3c3c-4963-8c64-6255b3d5fb0a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343247",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "qaoa_kernel",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp",
+     "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343247",
+ "buildStep": {
+  "cmdId": "d2fd240a-507b-49e8-91a0-368636222b5c",
+  "name": "",
+  "logFile": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "status": {
+  "cmdId": "d2fd240a-507b-49e8-91a0-368636222b5c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/sim/report/qaoa_kernel_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 16:59:03 2025",
+ "timestampMillis": "1763654343249",
+ "report": {
+  "path": "/home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 17:00:04 2025",
+ "timestampMillis": "1763654404694",
+ "status": {
+  "cmdId": "d2fd240a-507b-49e8-91a0-368636222b5c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Nov 20 17:00:04 2025",
+ "timestampMillis": "1763654404832",
+ "status": {
+  "cmdId": "5e744d64-3c3c-4963-8c64-6255b3d5fb0a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 17:00:04 2025",
+ "timestampMillis": "1763654404833",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Nov 20 17:00:04 2025",
+ "timestampMillis": "1763654404833",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

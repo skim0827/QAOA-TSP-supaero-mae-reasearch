@@ -1,0 +1,141 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "qaoa.cpp",
+    "fileloc": 208,
+    "instructions": 26,
+    "loads": {
+      "L": 1,
+      "T": 2
+    },
+    "name": "qaoa_kernel",
+    "total_instructions": 2646
+  },
+  "1": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 201,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "name": "generic_sincos<32, 12>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 106
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "qaoa.cpp",
+    "fileloc": 46,
+    "instructions": 57,
+    "name": "build_feasible_superposition<3>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 57
+  },
+  "3": {
+    "basicblocks": 4,
+    "calls": "7 1 1",
+    "file": "qaoa.cpp",
+    "fileloc": 79,
+    "instructions": 49,
+    "loads": {
+      "L": 5
+    },
+    "name": "applyCost_hls<3>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 799
+  },
+  "4": {
+    "basicblocks": 43,
+    "calls": "6 6",
+    "file": "qaoa.cpp",
+    "fileloc": 99,
+    "instructions": 258,
+    "loads": {
+      "L": 20
+    },
+    "name": "applyMixer_hls<3>",
+    "stores": {
+      "L": 20
+    },
+    "total_instructions": 464
+  },
+  "5": {
+    "basicblocks": 23,
+    "calls": "9 8 8",
+    "file": "qaoa.cpp",
+    "fileloc": 0,
+    "instructions": 134,
+    "loads": {
+      "L": 2
+    },
+    "name": "qaoa_kernel_",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 2620
+  },
+  "6": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 201,
+    "instructions": 103,
+    "loads": {
+      "G": 1
+    },
+    "name": "generic_sincos<64, 24>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 103
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "qaoa.cpp",
+    "fileloc": 5,
+    "instructions": 538,
+    "loads": {
+      "L": 9
+    },
+    "name": "costHamiltonian<3>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 538
+  },
+  "8": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "qaoa.cpp",
+    "fileloc": 170,
+    "instructions": 581,
+    "loads": {
+      "L": 11
+    },
+    "name": "expectation_cost<3>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 581
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "2 3 4",
+    "file": "qaoa.cpp",
+    "fileloc": 197,
+    "instructions": 4,
+    "name": "qaoaStep_hls<3, 1>",
+    "total_instructions": 1324
+  }
+}

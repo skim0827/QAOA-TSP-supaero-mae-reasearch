@@ -1,0 +1,73 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 60,735       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  | 16,895       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  4,778       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  3,218       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  2,593       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  2,638       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  2,638       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  2,638       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  2,638       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  2,661       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  2,661       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  2,647       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  2,643       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  2,643       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  2,667       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  2,646       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------------------+--------------------------+------------------+-----------------+-----------------+-----------------+---------------+
+| Function                            | Location                 | Compile/Link     | Unroll/Inline   | Array/Struct    | Performance     | HW Transforms |
++-------------------------------------+--------------------------+------------------+-----------------+-----------------+-----------------+---------------+
+| + qaoa_kernel                       | qaoa.cpp:208             | 60,735           | 2,593           | 2,661           | 2,643           | 2,646         |
+|    ComplexQ                         | qaoa.hpp:51              |   771            |                 |                 |                 |               |
+|  + qaoaStep_hls<3, 1>               | qaoa.cpp:197             | 42,226           | 1,284           | 1,347           | 1,351           |               |
+|   + build_feasible_superposition... | qaoa.cpp:46              | 6,210            |   36            |   37            |   52            |               |
+|      is_valid_onehot<3>             | qaoa.cpp:67              |    78 (2 calls)  |                 |                 |                 |               |
+|      ComplexQ                       | qaoa.hpp:52              |    14 (2 calls)  |                 |                 |                 |               |
+|   + applyCost_hls<3>                | qaoa.cpp:79              | 17,664           |  825            |  827            |  823            |               |
+|    + costHamiltonian<3>             | qaoa.cpp:5               | 6,987            |  540            |  538            |  538            |               |
+|       Z_eigenvalue_uint             | qaoa.hpp:82              |    32 (4 calls)  |                 |                 |                 |               |
+|      ComplexQ                       | qaoa.hpp:52              |     7            |                 |                 |                 |               |
+|      operator*=                     | qaoa.hpp:64              | 1,092            |                 |                 |                 |               |
+|      generic_sincos<32, 12>         | hls_cordic_apfixed.h:201 |                  |  228 (2 calls)  |  232 (2 calls)  |  228 (2 calls)  |               |
+|   + applyMixer_hls<3>               | qaoa.cpp:99              | 18,329           |  417            |  475            |  472            |               |
+|      ComplexQ                       | qaoa.hpp:51              | 1,542 (2 calls)  |                 |                 |                 |               |
+|      ComplexQ                       | qaoa.hpp:52              |    28 (4 calls)  |                 |                 |                 |               |
+|    + operator*                      | qaoa.hpp:55              | 4,356 (4 calls)  |                 |                 |                 |               |
+|       ComplexQ                      | qaoa.hpp:52              |    28 (4 calls)  |                 |                 |                 |               |
+|    + operator-                      | qaoa.hpp:61              |   461            |                 |                 |                 |               |
+|       ComplexQ                      | qaoa.hpp:52              |     7            |                 |                 |                 |               |
+|    + operator+                      | qaoa.hpp:58              |   461            |                 |                 |                 |               |
+|       ComplexQ                      | qaoa.hpp:52              |     7            |                 |                 |                 |               |
+|      generic_sincos<64, 24>         | hls_cordic_apfixed.h:201 |                  |  222 (2 calls)  |  226 (2 calls)  |  222 (2 calls)  |               |
+|  + expectation_cost<3>              | qaoa.cpp:170             | 17,462 (2 calls) | 1,168 (2 calls) | 1,172 (2 calls) | 1,148 (2 calls) |               |
+|   + costHamiltonian<3>              | qaoa.cpp:5               | 13,974 (2 calls) | 1,080 (2 calls) | 1,076 (2 calls) |                 |               |
+|      Z_eigenvalue_uint              | qaoa.hpp:82              |    64 (8 calls)  |                 |                 |                 |               |
++-------------------------------------+--------------------------+------------------+-----------------+-----------------+-----------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

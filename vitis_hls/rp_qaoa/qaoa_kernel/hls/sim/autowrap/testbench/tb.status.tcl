@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/./sim/autowrap/testbench/qaoa.cpp_pre.cpp.tb.cpp

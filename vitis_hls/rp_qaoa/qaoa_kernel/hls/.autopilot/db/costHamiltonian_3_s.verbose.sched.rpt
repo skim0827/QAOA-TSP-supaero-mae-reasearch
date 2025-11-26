@@ -1,0 +1,694 @@
+
+
+================================================================
+== Vitis HLS Report for 'costHamiltonian_3_s'
+================================================================
+* Date:           Thu Nov 20 16:57:50 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        qaoa_kernel
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.498 ns|     2.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       29|       29|  0.290 us|  0.290 us|    9|    9|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 9, depth = 30
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 30
+* Pipeline : 1
+  Pipeline-0 : II = 9, D = 30, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%s_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %s"   --->   Operation 31 'read' 's_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%d_addr = getelementptr i32 %d, i64 0, i64 0"   --->   Operation 32 'getelementptr' 'd_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%empty = trunc i9 %s_read"   --->   Operation 33 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [2/2] (2.32ns)   --->   "%d_load = load i4 %d_addr"   --->   Operation 34 'load' 'd_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_73 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 3" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 35 'bitselect' 'tmp_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_74 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 6" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 36 'bitselect' 'tmp_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_75 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 4" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 37 'bitselect' 'tmp_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_76 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 7" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 38 'bitselect' 'tmp_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_77 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 1" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 39 'bitselect' 'tmp_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_78 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 5" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 40 'bitselect' 'tmp_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_79 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 8" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 41 'bitselect' 'tmp_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_80 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %s_read, i32 2" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp:84->/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:18]   --->   Operation 42 'bitselect' 'tmp_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.70ns)   --->   "%select_ln30 = select i1 %empty, i22 2097152, i22 1048576" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 43 'select' 'select_ln30' <Predicate = true> <Delay = 0.70> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.70ns)   --->   "%select_ln30_14 = select i1 %empty, i22 1048576, i22 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 44 'select' 'select_ln30_14' <Predicate = true> <Delay = 0.70> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node add_ln30)   --->   "%select_ln30_15 = select i1 %tmp_73, i22 %select_ln30, i22 %select_ln30_14" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 45 'select' 'select_ln30_15' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node add_ln30)   --->   "%shl_ln4 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln30_15, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 46 'bitconcatenate' 'shl_ln4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node add_ln30)   --->   "%select_ln30_16 = select i1 %tmp_74, i42 1099511627776, i42 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 47 'select' 'select_ln30_16' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln30 = add i42 %shl_ln4, i42 %select_ln30_16" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 48 'add' 'add_ln30' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_59 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln30, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 49 'partselect' 'tmp_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node add_ln38)   --->   "%select_ln30_21 = select i1 %tmp_80, i42 1099511627776, i42 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 50 'select' 'select_ln30_21' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node add_ln38)   --->   "%select_ln38 = select i1 %tmp_77, i22 %select_ln30, i22 %select_ln30_14" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 51 'select' 'select_ln38' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node add_ln38)   --->   "%shl_ln5 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln38, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 52 'bitconcatenate' 'shl_ln5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln38 = add i42 %shl_ln5, i42 %select_ln30_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 53 'add' 'add_ln38' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_66 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln38, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 54 'partselect' 'tmp_66' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.34>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%d_addr_9 = getelementptr i32 %d, i64 0, i64 1"   --->   Operation 55 'getelementptr' 'd_addr_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load = load i4 %d_addr"   --->   Operation 56 'load' 'd_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 57 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.69ns)   --->   "%select_ln19 = select i1 %empty, i32 %d_load, i32 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 58 'select' 'select_ln19' <Predicate = (tmp_73)> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node add_ln19)   --->   "%and_ln = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %select_ln19, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 59 'bitconcatenate' 'and_ln' <Predicate = (tmp_73)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node add_ln19)   --->   "%select_ln19_54 = select i1 %tmp_73, i92 %and_ln, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 60 'select' 'select_ln19_54' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node add_ln19)   --->   "%select_ln19_55 = select i1 %tmp_73, i71 %shl_ln, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 61 'select' 'select_ln19_55' <Predicate = (tmp_74)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node add_ln19)   --->   "%shl_ln19_s = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_55, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 62 'bitconcatenate' 'shl_ln19_s' <Predicate = (tmp_74)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node add_ln19)   --->   "%select_ln19_56 = select i1 %tmp_74, i92 %shl_ln19_s, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 63 'select' 'select_ln19_56' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19 = add i92 %select_ln19_54, i92 %select_ln19_56" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 64 'add' 'add_ln19' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [2/2] (2.32ns)   --->   "%d_load_9 = load i4 %d_addr_9"   --->   Operation 65 'load' 'd_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln32 = zext i22 %tmp_59" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 66 'zext' 'zext_ln32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (2.25ns)   --->   "%add_ln32 = add i23 %zext_ln32, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 67 'add' 'add_ln32' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_81 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln32, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 68 'bitconcatenate' 'tmp_81' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%sext_ln32 = sext i48 %tmp_81" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 69 'sext' 'sext_ln32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_82 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln32, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 70 'bitconcatenate' 'tmp_82' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%sext_ln32_15 = sext i44 %tmp_82" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 71 'sext' 'sext_ln32_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (3.10ns)   --->   "%sub_ln32 = sub i49 %sext_ln32, i49 %sext_ln32_15" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 72 'sub' 'sub_ln32' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_3)   --->   "%select_ln30_17 = select i1 %tmp_77, i22 2097152, i22 1048576" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 73 'select' 'select_ln30_17' <Predicate = (tmp_75)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_3)   --->   "%select_ln30_18 = select i1 %tmp_77, i22 1048576, i22 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 74 'select' 'select_ln30_18' <Predicate = (!tmp_75)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_3)   --->   "%select_ln30_19 = select i1 %tmp_75, i22 %select_ln30_17, i22 %select_ln30_18" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 75 'select' 'select_ln30_19' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_3)   --->   "%shl_ln30_3 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln30_19, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 76 'bitconcatenate' 'shl_ln30_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_3)   --->   "%select_ln30_20 = select i1 %tmp_76, i42 1099511627776, i42 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 77 'select' 'select_ln30_20' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln30_3 = add i42 %shl_ln30_3, i42 %select_ln30_20" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 78 'add' 'add_ln30_3' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_62 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln30_3, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 79 'partselect' 'tmp_62' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.45>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%d_addr_10 = getelementptr i32 %d, i64 0, i64 2"   --->   Operation 80 'getelementptr' 'd_addr_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_26)   --->   "%tmp = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 81 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_26)   --->   "%and_ln19_s = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 82 'bitconcatenate' 'and_ln19_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_26)   --->   "%select_ln19_57 = select i1 %tmp_74, i71 %shl_ln, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 83 'select' 'select_ln19_57' <Predicate = (empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_26)   --->   "%shl_ln19_34 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_57, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 84 'bitconcatenate' 'shl_ln19_34' <Predicate = (empty)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_26)   --->   "%select_ln19_58 = select i1 %empty, i92 %shl_ln19_34, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 85 'select' 'select_ln19_58' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 86 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_26 = add i92 %and_ln19_s, i92 %select_ln19_58" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 86 'add' 'add_ln19_26' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_9 = load i4 %d_addr_9"   --->   Operation 87 'load' 'd_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 88 [2/2] (2.32ns)   --->   "%d_load_10 = load i4 %d_addr_10"   --->   Operation 88 'load' 'd_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%sext_ln32_12 = sext i49 %sub_ln32" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 89 'sext' 'sext_ln32_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%sext_ln32_13 = sext i23 %add_ln32" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 90 'sext' 'sext_ln32_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 91 [3/3] (7.45ns)   --->   "%mul_ln32 = mul i68 %sext_ln32_12, i68 %sext_ln32_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 91 'mul' 'mul_ln32' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln32_3 = zext i22 %tmp_62" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 92 'zext' 'zext_ln32_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (2.25ns)   --->   "%add_ln32_7 = add i23 %zext_ln32_3, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 93 'add' 'add_ln32_7' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_83 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln32_7, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 94 'bitconcatenate' 'tmp_83' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%sext_ln32_19 = sext i48 %tmp_83" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 95 'sext' 'sext_ln32_19' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_84 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln32_7, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 96 'bitconcatenate' 'tmp_84' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%sext_ln32_23 = sext i44 %tmp_84" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 97 'sext' 'sext_ln32_23' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (3.10ns)   --->   "%sub_ln32_3 = sub i49 %sext_ln32_19, i49 %sext_ln32_23" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 98 'sub' 'sub_ln32_3' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_4)   --->   "%select_ln30_23 = select i1 %tmp_80, i22 2097152, i22 1048576" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 99 'select' 'select_ln30_23' <Predicate = (tmp_78)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_4)   --->   "%select_ln30_24 = select i1 %tmp_80, i22 1048576, i22 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 100 'select' 'select_ln30_24' <Predicate = (!tmp_78)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_4)   --->   "%select_ln30_25 = select i1 %tmp_78, i22 %select_ln30_23, i22 %select_ln30_24" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 101 'select' 'select_ln30_25' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node add_ln30_4)   --->   "%shl_ln30_4 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln30_25, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 102 'bitconcatenate' 'shl_ln30_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (1.41ns)   --->   "%select_ln30_26 = select i1 %tmp_79, i42 1099511627776, i42 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 103 'select' 'select_ln30_26' <Predicate = true> <Delay = 1.41> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln30_4 = add i42 %shl_ln30_4, i42 %select_ln30_26" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 104 'add' 'add_ln30_4' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_64 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln30_4, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 105 'partselect' 'tmp_64' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_4)   --->   "%select_ln38_10 = select i1 %tmp_76, i22 2097152, i22 1048576" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 106 'select' 'select_ln38_10' <Predicate = (tmp_74)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_4)   --->   "%select_ln38_11 = select i1 %tmp_76, i22 1048576, i22 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 107 'select' 'select_ln38_11' <Predicate = (!tmp_74)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_4)   --->   "%select_ln38_12 = select i1 %tmp_74, i22 %select_ln38_10, i22 %select_ln38_11" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 108 'select' 'select_ln38_12' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_4)   --->   "%shl_ln38_4 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln38_12, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 109 'bitconcatenate' 'shl_ln38_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln38_4 = add i42 %shl_ln38_4, i42 %select_ln30_26" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 110 'add' 'add_ln38_4' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_70 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln38_4, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 111 'partselect' 'tmp_70' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 7.45>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%d_addr_11 = getelementptr i32 %d, i64 0, i64 3"   --->   Operation 112 'getelementptr' 'd_addr_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_27)   --->   "%tmp_s = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_26, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 113 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_27)   --->   "%and_ln19_25 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_s, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 114 'bitconcatenate' 'and_ln19_25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%shl_ln19_35 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_9, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 115 'bitconcatenate' 'shl_ln19_35' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_27)   --->   "%select_ln19_59 = select i1 %empty, i71 %shl_ln19_35, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 116 'select' 'select_ln19_59' <Predicate = (tmp_75)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_27)   --->   "%shl_ln19_36 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_59, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 117 'bitconcatenate' 'shl_ln19_36' <Predicate = (tmp_75)> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_27)   --->   "%select_ln19_60 = select i1 %tmp_75, i92 %shl_ln19_36, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 118 'select' 'select_ln19_60' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_27 = add i92 %and_ln19_25, i92 %select_ln19_60" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 119 'add' 'add_ln19_27' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 120 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_10 = load i4 %d_addr_10"   --->   Operation 120 'load' 'd_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 121 [2/2] (2.32ns)   --->   "%d_load_11 = load i4 %d_addr_11"   --->   Operation 121 'load' 'd_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 122 [2/3] (7.45ns)   --->   "%mul_ln32 = mul i68 %sext_ln32_12, i68 %sext_ln32_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 122 'mul' 'mul_ln32' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 123 [1/1] (0.00ns)   --->   "%sext_ln32_16 = sext i49 %sub_ln32_3" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 123 'sext' 'sext_ln32_16' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%sext_ln32_17 = sext i23 %add_ln32_7" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 124 'sext' 'sext_ln32_17' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 125 [3/3] (7.45ns)   --->   "%mul_ln32_3 = mul i68 %sext_ln32_16, i68 %sext_ln32_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 125 'mul' 'mul_ln32_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln32_4 = zext i22 %tmp_64" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 126 'zext' 'zext_ln32_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (2.25ns)   --->   "%add_ln32_9 = add i23 %zext_ln32_4, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 127 'add' 'add_ln32_9' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_85 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln32_9, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 128 'bitconcatenate' 'tmp_85' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "%sext_ln32_24 = sext i48 %tmp_85" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 129 'sext' 'sext_ln32_24' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_86 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln32_9, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 130 'bitconcatenate' 'tmp_86' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "%sext_ln32_25 = sext i44 %tmp_86" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 131 'sext' 'sext_ln32_25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 132 [1/1] (3.10ns)   --->   "%sub_ln32_4 = sub i49 %sext_ln32_24, i49 %sext_ln32_25" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 132 'sub' 'sub_ln32_4' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.45>
+ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%d_addr_12 = getelementptr i32 %d, i64 0, i64 4"   --->   Operation 133 'getelementptr' 'd_addr_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_28)   --->   "%tmp_36 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_27, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 134 'partselect' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_28)   --->   "%and_ln19_26 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_36, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 135 'bitconcatenate' 'and_ln19_26' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_28)   --->   "%select_ln19_61 = select i1 %tmp_73, i71 %shl_ln19_35, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 136 'select' 'select_ln19_61' <Predicate = (tmp_76)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_28)   --->   "%shl_ln19_37 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_61, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 137 'bitconcatenate' 'shl_ln19_37' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_28)   --->   "%select_ln19_62 = select i1 %tmp_76, i92 %shl_ln19_37, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 138 'select' 'select_ln19_62' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_28 = add i92 %and_ln19_26, i92 %select_ln19_62" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 139 'add' 'add_ln19_28' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 140 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_11 = load i4 %d_addr_11"   --->   Operation 140 'load' 'd_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 141 [2/2] (2.32ns)   --->   "%d_load_12 = load i4 %d_addr_12"   --->   Operation 141 'load' 'd_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_5 : Operation 142 [1/3] (7.45ns)   --->   "%mul_ln32 = mul i68 %sext_ln32_12, i68 %sext_ln32_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 142 'mul' 'mul_ln32' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 143 [2/3] (7.45ns)   --->   "%mul_ln32_3 = mul i68 %sext_ln32_16, i68 %sext_ln32_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 143 'mul' 'mul_ln32_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_3)   --->   "%select_ln30_22 = select i1 %tmp_78, i42 1099511627776, i42 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30]   --->   Operation 144 'select' 'select_ln30_22' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%sext_ln32_20 = sext i49 %sub_ln32_4" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 145 'sext' 'sext_ln32_20' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 146 [1/1] (0.00ns)   --->   "%sext_ln32_21 = sext i23 %add_ln32_9" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 146 'sext' 'sext_ln32_21' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 147 [3/3] (7.45ns)   --->   "%mul_ln32_4 = mul i68 %sext_ln32_20, i68 %sext_ln32_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 147 'mul' 'mul_ln32_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i22 %tmp_66" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 148 'zext' 'zext_ln40' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 149 [1/1] (2.25ns)   --->   "%add_ln40 = add i23 %zext_ln40, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 149 'add' 'add_ln40' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_87 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln40, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 150 'bitconcatenate' 'tmp_87' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%sext_ln40 = sext i48 %tmp_87" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 151 'sext' 'sext_ln40' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_88 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln40, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 152 'bitconcatenate' 'tmp_88' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 153 [1/1] (0.00ns)   --->   "%sext_ln40_15 = sext i44 %tmp_88" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 153 'sext' 'sext_ln40_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 154 [1/1] (3.10ns)   --->   "%sub_ln40 = sub i49 %sext_ln40, i49 %sext_ln40_15" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 154 'sub' 'sub_ln40' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 155 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_3)   --->   "%select_ln38_7 = select i1 %tmp_75, i22 2097152, i22 1048576" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 155 'select' 'select_ln38_7' <Predicate = (tmp_73)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_3)   --->   "%select_ln38_8 = select i1 %tmp_75, i22 1048576, i22 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 156 'select' 'select_ln38_8' <Predicate = (!tmp_73)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 157 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_3)   --->   "%select_ln38_9 = select i1 %tmp_73, i22 %select_ln38_7, i22 %select_ln38_8" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 157 'select' 'select_ln38_9' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 158 [1/1] (0.00ns) (grouped into LUT with out node add_ln38_3)   --->   "%shl_ln38_3 = bitconcatenate i42 @_ssdm_op_BitConcatenate.i42.i22.i20, i22 %select_ln38_9, i20 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 158 'bitconcatenate' 'shl_ln38_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 159 [1/1] (2.93ns) (out node of the LUT)   --->   "%add_ln38_3 = add i42 %shl_ln38_3, i42 %select_ln30_22" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:38]   --->   Operation 159 'add' 'add_ln38_3' <Predicate = true> <Delay = 2.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%tmp_68 = partselect i22 @_ssdm_op_PartSelect.i22.i42.i32.i32, i42 %add_ln38_3, i32 20, i32 41" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 160 'partselect' 'tmp_68' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 7.45>
+ST_6 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_29)   --->   "%tmp_37 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_28, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 161 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 162 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_29)   --->   "%and_ln19_27 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_37, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 162 'bitconcatenate' 'and_ln19_27' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_29)   --->   "%select_ln19_63 = select i1 %tmp_74, i71 %shl_ln19_35, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 163 'select' 'select_ln19_63' <Predicate = (tmp_77)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_29)   --->   "%shl_ln19_38 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_63, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 164 'bitconcatenate' 'shl_ln19_38' <Predicate = (tmp_77)> <Delay = 0.00>
+ST_6 : Operation 165 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_29)   --->   "%select_ln19_64 = select i1 %tmp_77, i92 %shl_ln19_38, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 165 'select' 'select_ln19_64' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 166 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_29 = add i92 %and_ln19_27, i92 %select_ln19_64" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 166 'add' 'add_ln19_29' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 167 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_12 = load i4 %d_addr_12"   --->   Operation 167 'load' 'd_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_6 : Operation 168 [1/3] (7.45ns)   --->   "%mul_ln32_3 = mul i68 %sext_ln32_16, i68 %sext_ln32_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 168 'mul' 'mul_ln32_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 169 [2/3] (7.45ns)   --->   "%mul_ln32_4 = mul i68 %sext_ln32_20, i68 %sext_ln32_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 169 'mul' 'mul_ln32_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%sext_ln40_12 = sext i49 %sub_ln40" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 170 'sext' 'sext_ln40_12' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 171 [1/1] (0.00ns)   --->   "%sext_ln40_13 = sext i23 %add_ln40" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 171 'sext' 'sext_ln40_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 172 [3/3] (7.45ns)   --->   "%mul_ln40 = mul i68 %sext_ln40_12, i68 %sext_ln40_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 172 'mul' 'mul_ln40' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 173 [1/1] (0.00ns)   --->   "%zext_ln40_3 = zext i22 %tmp_68" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 173 'zext' 'zext_ln40_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 174 [1/1] (2.25ns)   --->   "%add_ln40_7 = add i23 %zext_ln40_3, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 174 'add' 'add_ln40_7' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_89 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln40_7, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 175 'bitconcatenate' 'tmp_89' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 176 [1/1] (0.00ns)   --->   "%sext_ln40_19 = sext i48 %tmp_89" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 176 'sext' 'sext_ln40_19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_90 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln40_7, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 177 'bitconcatenate' 'tmp_90' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 178 [1/1] (0.00ns)   --->   "%sext_ln40_23 = sext i44 %tmp_90" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 178 'sext' 'sext_ln40_23' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 179 [1/1] (3.10ns)   --->   "%sub_ln40_3 = sub i49 %sext_ln40_19, i49 %sext_ln40_23" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 179 'sub' 'sub_ln40_3' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.45>
+ST_7 : Operation 180 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_30)   --->   "%tmp_38 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_29, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 180 'partselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_30)   --->   "%and_ln19_28 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_38, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 181 'bitconcatenate' 'and_ln19_28' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 182 [1/1] (0.00ns)   --->   "%shl_ln19_39 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_10, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 182 'bitconcatenate' 'shl_ln19_39' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 183 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_30)   --->   "%select_ln19_65 = select i1 %empty, i71 %shl_ln19_39, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 183 'select' 'select_ln19_65' <Predicate = (tmp_78)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 184 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_30)   --->   "%shl_ln19_40 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_65, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 184 'bitconcatenate' 'shl_ln19_40' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_7 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_30)   --->   "%select_ln19_66 = select i1 %tmp_78, i92 %shl_ln19_40, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 185 'select' 'select_ln19_66' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 186 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_30 = add i92 %and_ln19_28, i92 %select_ln19_66" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 186 'add' 'add_ln19_30' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 187 [1/3] (7.45ns)   --->   "%mul_ln32_4 = mul i68 %sext_ln32_20, i68 %sext_ln32_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 187 'mul' 'mul_ln32_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 188 [2/3] (7.45ns)   --->   "%mul_ln40 = mul i68 %sext_ln40_12, i68 %sext_ln40_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 188 'mul' 'mul_ln40' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 189 [1/1] (0.00ns)   --->   "%sext_ln40_16 = sext i49 %sub_ln40_3" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 189 'sext' 'sext_ln40_16' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 190 [1/1] (0.00ns)   --->   "%sext_ln40_17 = sext i23 %add_ln40_7" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 190 'sext' 'sext_ln40_17' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 191 [3/3] (7.45ns)   --->   "%mul_ln40_3 = mul i68 %sext_ln40_16, i68 %sext_ln40_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 191 'mul' 'mul_ln40_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln40_4 = zext i22 %tmp_70" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 192 'zext' 'zext_ln40_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 193 [1/1] (2.25ns)   --->   "%add_ln40_9 = add i23 %zext_ln40_4, i23 7340032" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 193 'add' 'add_ln40_9' <Predicate = true> <Delay = 2.25> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.25> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 194 [1/1] (0.00ns)   --->   "%tmp_91 = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i23.i25, i23 %add_ln40_9, i25 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 194 'bitconcatenate' 'tmp_91' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 195 [1/1] (0.00ns)   --->   "%sext_ln40_24 = sext i48 %tmp_91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 195 'sext' 'sext_ln40_24' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_92 = bitconcatenate i44 @_ssdm_op_BitConcatenate.i44.i23.i21, i23 %add_ln40_9, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 196 'bitconcatenate' 'tmp_92' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "%sext_ln40_25 = sext i44 %tmp_92" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 197 'sext' 'sext_ln40_25' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 198 [1/1] (3.10ns)   --->   "%sub_ln40_4 = sub i49 %sext_ln40_24, i49 %sext_ln40_25" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 198 'sub' 'sub_ln40_4' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.45>
+ST_8 : Operation 199 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_31)   --->   "%tmp_39 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_30, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 199 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 200 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_31)   --->   "%and_ln19_29 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_39, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 200 'bitconcatenate' 'and_ln19_29' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 201 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_31)   --->   "%select_ln19_67 = select i1 %tmp_73, i71 %shl_ln19_39, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 201 'select' 'select_ln19_67' <Predicate = (tmp_79)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 202 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_31)   --->   "%shl_ln19_41 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_67, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 202 'bitconcatenate' 'shl_ln19_41' <Predicate = (tmp_79)> <Delay = 0.00>
+ST_8 : Operation 203 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_31)   --->   "%select_ln19_68 = select i1 %tmp_79, i92 %shl_ln19_41, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 203 'select' 'select_ln19_68' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 204 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_31 = add i92 %and_ln19_29, i92 %select_ln19_68" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 204 'add' 'add_ln19_31' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 205 [1/3] (7.45ns)   --->   "%mul_ln40 = mul i68 %sext_ln40_12, i68 %sext_ln40_13" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 205 'mul' 'mul_ln40' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 206 [2/3] (7.45ns)   --->   "%mul_ln40_3 = mul i68 %sext_ln40_16, i68 %sext_ln40_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 206 'mul' 'mul_ln40_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 207 [1/1] (0.00ns)   --->   "%sext_ln40_20 = sext i49 %sub_ln40_4" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 207 'sext' 'sext_ln40_20' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 208 [1/1] (0.00ns)   --->   "%sext_ln40_21 = sext i23 %add_ln40_9" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 208 'sext' 'sext_ln40_21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 209 [3/3] (7.45ns)   --->   "%mul_ln40_4 = mul i68 %sext_ln40_20, i68 %sext_ln40_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 209 'mul' 'mul_ln40_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.45>
+ST_9 : Operation 210 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_32)   --->   "%tmp_40 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_31, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 210 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 211 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_32)   --->   "%and_ln19_30 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_40, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 211 'bitconcatenate' 'and_ln19_30' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 212 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_32)   --->   "%select_ln19_69 = select i1 %tmp_74, i71 %shl_ln19_39, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 212 'select' 'select_ln19_69' <Predicate = (tmp_80)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 213 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_32)   --->   "%shl_ln19_42 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_69, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 213 'bitconcatenate' 'shl_ln19_42' <Predicate = (tmp_80)> <Delay = 0.00>
+ST_9 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_32)   --->   "%select_ln19_70 = select i1 %tmp_80, i92 %shl_ln19_42, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 214 'select' 'select_ln19_70' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 215 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_32 = add i92 %and_ln19_30, i92 %select_ln19_70" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 215 'add' 'add_ln19_32' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 216 [1/3] (7.45ns)   --->   "%mul_ln40_3 = mul i68 %sext_ln40_16, i68 %sext_ln40_17" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 216 'mul' 'mul_ln40_3' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 217 [2/3] (7.45ns)   --->   "%mul_ln40_4 = mul i68 %sext_ln40_20, i68 %sext_ln40_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 217 'mul' 'mul_ln40_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.45>
+ST_10 : Operation 218 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_33)   --->   "%tmp_41 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_32, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 218 'partselect' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 219 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_33)   --->   "%and_ln19_31 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_41, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 219 'bitconcatenate' 'and_ln19_31' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 220 [1/1] (0.00ns)   --->   "%shl_ln19_43 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_11, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 220 'bitconcatenate' 'shl_ln19_43' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 221 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_33)   --->   "%select_ln19_71 = select i1 %tmp_77, i71 %shl_ln19_43, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 221 'select' 'select_ln19_71' <Predicate = (tmp_73)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 222 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_33)   --->   "%shl_ln19_44 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_71, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 222 'bitconcatenate' 'shl_ln19_44' <Predicate = (tmp_73)> <Delay = 0.00>
+ST_10 : Operation 223 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_33)   --->   "%select_ln19_72 = select i1 %tmp_73, i92 %shl_ln19_44, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 223 'select' 'select_ln19_72' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 224 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_33 = add i92 %and_ln19_31, i92 %select_ln19_72" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 224 'add' 'add_ln19_33' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 225 [1/3] (7.45ns)   --->   "%mul_ln40_4 = mul i68 %sext_ln40_20, i68 %sext_ln40_21" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 225 'mul' 'mul_ln40_4' <Predicate = true> <Delay = 7.45> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 7.45> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 4.32>
+ST_11 : Operation 226 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_34)   --->   "%tmp_42 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_33, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 226 'partselect' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_34)   --->   "%and_ln19_32 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_42, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 227 'bitconcatenate' 'and_ln19_32' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 228 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_34)   --->   "%select_ln19_73 = select i1 %tmp_75, i71 %shl_ln19_43, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 228 'select' 'select_ln19_73' <Predicate = (tmp_74)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_34)   --->   "%shl_ln19_45 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_73, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 229 'bitconcatenate' 'shl_ln19_45' <Predicate = (tmp_74)> <Delay = 0.00>
+ST_11 : Operation 230 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_34)   --->   "%select_ln19_74 = select i1 %tmp_74, i92 %shl_ln19_45, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 230 'select' 'select_ln19_74' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 231 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_34 = add i92 %and_ln19_32, i92 %select_ln19_74" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 231 'add' 'add_ln19_34' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.32>
+ST_12 : Operation 232 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_35)   --->   "%tmp_43 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_34, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 232 'partselect' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 233 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_35)   --->   "%and_ln19_33 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_43, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 233 'bitconcatenate' 'and_ln19_33' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 234 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_35)   --->   "%select_ln19_75 = select i1 %tmp_76, i71 %shl_ln19_43, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 234 'select' 'select_ln19_75' <Predicate = (empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 235 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_35)   --->   "%shl_ln19_46 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_75, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 235 'bitconcatenate' 'shl_ln19_46' <Predicate = (empty)> <Delay = 0.00>
+ST_12 : Operation 236 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_35)   --->   "%select_ln19_76 = select i1 %empty, i92 %shl_ln19_46, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 236 'select' 'select_ln19_76' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 237 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_35 = add i92 %and_ln19_33, i92 %select_ln19_76" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 237 'add' 'add_ln19_35' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 4.32>
+ST_13 : Operation 238 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_36)   --->   "%tmp_44 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_35, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 238 'partselect' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 239 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_36)   --->   "%and_ln19_34 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_44, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 239 'bitconcatenate' 'and_ln19_34' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 240 [1/1] (0.00ns)   --->   "%shl_ln19_47 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_12, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 240 'bitconcatenate' 'shl_ln19_47' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 241 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_36)   --->   "%select_ln19_77 = select i1 %tmp_77, i71 %shl_ln19_47, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 241 'select' 'select_ln19_77' <Predicate = (tmp_75)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 242 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_36)   --->   "%shl_ln19_48 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_77, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 242 'bitconcatenate' 'shl_ln19_48' <Predicate = (tmp_75)> <Delay = 0.00>
+ST_13 : Operation 243 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_36)   --->   "%select_ln19_78 = select i1 %tmp_75, i92 %shl_ln19_48, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 243 'select' 'select_ln19_78' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 244 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_36 = add i92 %and_ln19_34, i92 %select_ln19_78" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 244 'add' 'add_ln19_36' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 4.32>
+ST_14 : Operation 245 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_37)   --->   "%tmp_45 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_36, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 245 'partselect' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 246 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_37)   --->   "%and_ln19_35 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_45, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 246 'bitconcatenate' 'and_ln19_35' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 247 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_37)   --->   "%select_ln19_79 = select i1 %tmp_75, i71 %shl_ln19_47, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 247 'select' 'select_ln19_79' <Predicate = (tmp_76)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 248 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_37)   --->   "%shl_ln19_49 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_79, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 248 'bitconcatenate' 'shl_ln19_49' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_14 : Operation 249 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_37)   --->   "%select_ln19_80 = select i1 %tmp_76, i92 %shl_ln19_49, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 249 'select' 'select_ln19_80' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 250 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_37 = add i92 %and_ln19_35, i92 %select_ln19_80" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 250 'add' 'add_ln19_37' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 4.32>
+ST_15 : Operation 251 [1/1] (0.00ns)   --->   "%d_addr_13 = getelementptr i32 %d, i64 0, i64 5"   --->   Operation 251 'getelementptr' 'd_addr_13' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 252 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_38)   --->   "%tmp_46 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_37, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 252 'partselect' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 253 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_38)   --->   "%and_ln19_36 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_46, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 253 'bitconcatenate' 'and_ln19_36' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 254 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_38)   --->   "%select_ln19_81 = select i1 %tmp_76, i71 %shl_ln19_47, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 254 'select' 'select_ln19_81' <Predicate = (tmp_77)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 255 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_38)   --->   "%shl_ln19_50 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_81, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 255 'bitconcatenate' 'shl_ln19_50' <Predicate = (tmp_77)> <Delay = 0.00>
+ST_15 : Operation 256 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_38)   --->   "%select_ln19_82 = select i1 %tmp_77, i92 %shl_ln19_50, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 256 'select' 'select_ln19_82' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_15 : Operation 257 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_38 = add i92 %and_ln19_36, i92 %select_ln19_82" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 257 'add' 'add_ln19_38' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 258 [2/2] (2.32ns)   --->   "%d_load_13 = load i4 %d_addr_13"   --->   Operation 258 'load' 'd_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 16 <SV = 15> <Delay = 6.64>
+ST_16 : Operation 259 [1/1] (0.00ns)   --->   "%d_addr_14 = getelementptr i32 %d, i64 0, i64 6"   --->   Operation 259 'getelementptr' 'd_addr_14' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_39)   --->   "%tmp_47 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_38, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 260 'partselect' 'tmp_47' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 261 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_39)   --->   "%and_ln19_37 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_47, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 261 'bitconcatenate' 'and_ln19_37' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 262 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_13 = load i4 %d_addr_13"   --->   Operation 262 'load' 'd_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_16 : Operation 263 [1/1] (0.00ns)   --->   "%shl_ln19_51 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_13, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 263 'bitconcatenate' 'shl_ln19_51' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 264 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_39)   --->   "%select_ln19_83 = select i1 %tmp_77, i71 %shl_ln19_51, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 264 'select' 'select_ln19_83' <Predicate = (tmp_78)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 265 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_39)   --->   "%shl_ln19_52 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_83, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 265 'bitconcatenate' 'shl_ln19_52' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_16 : Operation 266 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_39)   --->   "%select_ln19_84 = select i1 %tmp_78, i92 %shl_ln19_52, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 266 'select' 'select_ln19_84' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 267 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_39 = add i92 %and_ln19_37, i92 %select_ln19_84" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 267 'add' 'add_ln19_39' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 268 [2/2] (2.32ns)   --->   "%d_load_14 = load i4 %d_addr_14"   --->   Operation 268 'load' 'd_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 17 <SV = 16> <Delay = 4.32>
+ST_17 : Operation 269 [1/1] (0.00ns)   --->   "%d_addr_15 = getelementptr i32 %d, i64 0, i64 7"   --->   Operation 269 'getelementptr' 'd_addr_15' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 270 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_40)   --->   "%tmp_48 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_39, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 270 'partselect' 'tmp_48' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 271 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_40)   --->   "%and_ln19_38 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_48, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 271 'bitconcatenate' 'and_ln19_38' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 272 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_40)   --->   "%select_ln19_85 = select i1 %tmp_75, i71 %shl_ln19_51, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 272 'select' 'select_ln19_85' <Predicate = (tmp_79)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 273 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_40)   --->   "%shl_ln19_53 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_85, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 273 'bitconcatenate' 'shl_ln19_53' <Predicate = (tmp_79)> <Delay = 0.00>
+ST_17 : Operation 274 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_40)   --->   "%select_ln19_86 = select i1 %tmp_79, i92 %shl_ln19_53, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 274 'select' 'select_ln19_86' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 275 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_40 = add i92 %and_ln19_38, i92 %select_ln19_86" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 275 'add' 'add_ln19_40' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 276 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_14 = load i4 %d_addr_14"   --->   Operation 276 'load' 'd_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_17 : Operation 277 [2/2] (2.32ns)   --->   "%d_load_15 = load i4 %d_addr_15"   --->   Operation 277 'load' 'd_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 18 <SV = 17> <Delay = 4.32>
+ST_18 : Operation 278 [1/1] (0.00ns)   --->   "%d_addr_16 = getelementptr i32 %d, i64 0, i64 8"   --->   Operation 278 'getelementptr' 'd_addr_16' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 279 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_41)   --->   "%tmp_49 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_40, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 279 'partselect' 'tmp_49' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 280 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_41)   --->   "%and_ln19_39 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_49, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 280 'bitconcatenate' 'and_ln19_39' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 281 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_41)   --->   "%select_ln19_87 = select i1 %tmp_76, i71 %shl_ln19_51, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 281 'select' 'select_ln19_87' <Predicate = (tmp_80)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 282 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_41)   --->   "%shl_ln19_54 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_87, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 282 'bitconcatenate' 'shl_ln19_54' <Predicate = (tmp_80)> <Delay = 0.00>
+ST_18 : Operation 283 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_41)   --->   "%select_ln19_88 = select i1 %tmp_80, i92 %shl_ln19_54, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 283 'select' 'select_ln19_88' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 284 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_41 = add i92 %and_ln19_39, i92 %select_ln19_88" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 284 'add' 'add_ln19_41' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 285 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_15 = load i4 %d_addr_15"   --->   Operation 285 'load' 'd_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+ST_18 : Operation 286 [2/2] (2.32ns)   --->   "%d_load_16 = load i4 %d_addr_16"   --->   Operation 286 'load' 'd_load_16' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 19 <SV = 18> <Delay = 4.32>
+ST_19 : Operation 287 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_42)   --->   "%tmp_50 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_41, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 287 'partselect' 'tmp_50' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 288 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_42)   --->   "%and_ln19_40 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_50, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 288 'bitconcatenate' 'and_ln19_40' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 289 [1/1] (0.00ns)   --->   "%shl_ln19_55 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_14, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 289 'bitconcatenate' 'shl_ln19_55' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 290 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_42)   --->   "%select_ln19_89 = select i1 %tmp_80, i71 %shl_ln19_55, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 290 'select' 'select_ln19_89' <Predicate = (tmp_73)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_19 : Operation 291 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_42)   --->   "%shl_ln19_56 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_89, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 291 'bitconcatenate' 'shl_ln19_56' <Predicate = (tmp_73)> <Delay = 0.00>
+ST_19 : Operation 292 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_42)   --->   "%select_ln19_90 = select i1 %tmp_73, i92 %shl_ln19_56, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 292 'select' 'select_ln19_90' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_19 : Operation 293 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_42 = add i92 %and_ln19_40, i92 %select_ln19_90" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 293 'add' 'add_ln19_42' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 294 [1/2] ( I:2.32ns O:2.32ns )   --->   "%d_load_16 = load i4 %d_addr_16"   --->   Operation 294 'load' 'd_load_16' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 9> <RAM>
+
+State 20 <SV = 19> <Delay = 4.32>
+ST_20 : Operation 295 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_43)   --->   "%tmp_51 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_42, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 295 'partselect' 'tmp_51' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 296 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_43)   --->   "%and_ln19_41 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_51, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 296 'bitconcatenate' 'and_ln19_41' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 297 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_43)   --->   "%select_ln19_91 = select i1 %tmp_78, i71 %shl_ln19_55, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 297 'select' 'select_ln19_91' <Predicate = (tmp_74)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_43)   --->   "%shl_ln19_57 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_91, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 298 'bitconcatenate' 'shl_ln19_57' <Predicate = (tmp_74)> <Delay = 0.00>
+ST_20 : Operation 299 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_43)   --->   "%select_ln19_92 = select i1 %tmp_74, i92 %shl_ln19_57, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 299 'select' 'select_ln19_92' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 300 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_43 = add i92 %and_ln19_41, i92 %select_ln19_92" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 300 'add' 'add_ln19_43' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 4.32>
+ST_21 : Operation 301 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_44)   --->   "%tmp_52 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_43, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 301 'partselect' 'tmp_52' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_44)   --->   "%and_ln19_42 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_52, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 302 'bitconcatenate' 'and_ln19_42' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_44)   --->   "%select_ln19_93 = select i1 %tmp_79, i71 %shl_ln19_55, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 303 'select' 'select_ln19_93' <Predicate = (empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 304 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_44)   --->   "%shl_ln19_58 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_93, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 304 'bitconcatenate' 'shl_ln19_58' <Predicate = (empty)> <Delay = 0.00>
+ST_21 : Operation 305 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_44)   --->   "%select_ln19_94 = select i1 %empty, i92 %shl_ln19_58, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 305 'select' 'select_ln19_94' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 306 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_44 = add i92 %and_ln19_42, i92 %select_ln19_94" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 306 'add' 'add_ln19_44' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 4.32>
+ST_22 : Operation 307 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_45)   --->   "%tmp_53 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_44, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 307 'partselect' 'tmp_53' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 308 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_45)   --->   "%and_ln19_43 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_53, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 308 'bitconcatenate' 'and_ln19_43' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 309 [1/1] (0.00ns)   --->   "%shl_ln19_59 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_15, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 309 'bitconcatenate' 'shl_ln19_59' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 310 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_45)   --->   "%select_ln19_95 = select i1 %tmp_80, i71 %shl_ln19_59, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 310 'select' 'select_ln19_95' <Predicate = (tmp_75)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 311 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_45)   --->   "%shl_ln19_60 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_95, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 311 'bitconcatenate' 'shl_ln19_60' <Predicate = (tmp_75)> <Delay = 0.00>
+ST_22 : Operation 312 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_45)   --->   "%select_ln19_96 = select i1 %tmp_75, i92 %shl_ln19_60, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 312 'select' 'select_ln19_96' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 313 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_45 = add i92 %and_ln19_43, i92 %select_ln19_96" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 313 'add' 'add_ln19_45' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 4.32>
+ST_23 : Operation 314 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_46)   --->   "%tmp_54 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_45, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 314 'partselect' 'tmp_54' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_46)   --->   "%and_ln19_44 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_54, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 315 'bitconcatenate' 'and_ln19_44' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 316 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_46)   --->   "%select_ln19_97 = select i1 %tmp_78, i71 %shl_ln19_59, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 316 'select' 'select_ln19_97' <Predicate = (tmp_76)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 317 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_46)   --->   "%shl_ln19_61 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_97, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 317 'bitconcatenate' 'shl_ln19_61' <Predicate = (tmp_76)> <Delay = 0.00>
+ST_23 : Operation 318 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_46)   --->   "%select_ln19_98 = select i1 %tmp_76, i92 %shl_ln19_61, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 318 'select' 'select_ln19_98' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 319 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_46 = add i92 %and_ln19_44, i92 %select_ln19_98" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 319 'add' 'add_ln19_46' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 4.32>
+ST_24 : Operation 320 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_47)   --->   "%tmp_55 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_46, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 320 'partselect' 'tmp_55' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 321 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_47)   --->   "%and_ln19_45 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_55, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 321 'bitconcatenate' 'and_ln19_45' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 322 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_47)   --->   "%select_ln19_99 = select i1 %tmp_79, i71 %shl_ln19_59, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 322 'select' 'select_ln19_99' <Predicate = (tmp_77)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 323 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_47)   --->   "%shl_ln19_62 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_99, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 323 'bitconcatenate' 'shl_ln19_62' <Predicate = (tmp_77)> <Delay = 0.00>
+ST_24 : Operation 324 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_47)   --->   "%select_ln19_100 = select i1 %tmp_77, i92 %shl_ln19_62, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 324 'select' 'select_ln19_100' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 325 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_47 = add i92 %and_ln19_45, i92 %select_ln19_100" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 325 'add' 'add_ln19_47' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 4.32>
+ST_25 : Operation 326 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_48)   --->   "%tmp_56 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_47, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 326 'partselect' 'tmp_56' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 327 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_48)   --->   "%and_ln19_46 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_56, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 327 'bitconcatenate' 'and_ln19_46' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 328 [1/1] (0.00ns)   --->   "%shl_ln19_63 = bitconcatenate i71 @_ssdm_op_BitConcatenate.i71.i32.i39, i32 %d_load_16, i39 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 328 'bitconcatenate' 'shl_ln19_63' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 329 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_48)   --->   "%select_ln19_101 = select i1 %tmp_80, i71 %shl_ln19_63, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 329 'select' 'select_ln19_101' <Predicate = (tmp_78)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 330 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_48)   --->   "%shl_ln19_64 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_101, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 330 'bitconcatenate' 'shl_ln19_64' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_25 : Operation 331 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_48)   --->   "%select_ln19_102 = select i1 %tmp_78, i92 %shl_ln19_64, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 331 'select' 'select_ln19_102' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 332 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_48 = add i92 %and_ln19_46, i92 %select_ln19_102" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 332 'add' 'add_ln19_48' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 4.32>
+ST_26 : Operation 333 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_49)   --->   "%tmp_57 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_48, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 333 'partselect' 'tmp_57' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 334 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_49)   --->   "%and_ln19_47 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_57, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 334 'bitconcatenate' 'and_ln19_47' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 335 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_49)   --->   "%select_ln19_103 = select i1 %tmp_78, i71 %shl_ln19_63, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 335 'select' 'select_ln19_103' <Predicate = (tmp_79)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 336 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_49)   --->   "%shl_ln19_65 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_103, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 336 'bitconcatenate' 'shl_ln19_65' <Predicate = (tmp_79)> <Delay = 0.00>
+ST_26 : Operation 337 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_49)   --->   "%select_ln19_104 = select i1 %tmp_79, i92 %shl_ln19_65, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 337 'select' 'select_ln19_104' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 338 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_49 = add i92 %and_ln19_47, i92 %select_ln19_104" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 338 'add' 'add_ln19_49' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 4.32>
+ST_27 : Operation 339 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_50)   --->   "%tmp_58 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_49, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 339 'partselect' 'tmp_58' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 340 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_50)   --->   "%and_ln19_48 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i32.i60, i32 %tmp_58, i60 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 340 'bitconcatenate' 'and_ln19_48' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 341 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_50)   --->   "%select_ln19_105 = select i1 %tmp_79, i71 %shl_ln19_63, i71 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 341 'select' 'select_ln19_105' <Predicate = (tmp_80)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 342 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_50)   --->   "%shl_ln19_66 = bitconcatenate i92 @_ssdm_op_BitConcatenate.i92.i71.i21, i71 %select_ln19_105, i21 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 342 'bitconcatenate' 'shl_ln19_66' <Predicate = (tmp_80)> <Delay = 0.00>
+ST_27 : Operation 343 [1/1] (0.00ns) (grouped into LUT with out node add_ln19_50)   --->   "%select_ln19_106 = select i1 %tmp_80, i92 %shl_ln19_66, i92 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 343 'select' 'select_ln19_106' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 344 [1/1] (4.32ns) (out node of the LUT)   --->   "%add_ln19_50 = add i92 %and_ln19_48, i92 %select_ln19_106" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19]   --->   Operation 344 'add' 'add_ln19_50' <Predicate = true> <Delay = 4.32> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 345 [1/1] (0.00ns)   --->   "%tmp_60 = partselect i32 @_ssdm_op_PartSelect.i32.i92.i32.i32, i92 %add_ln19_50, i32 60, i32 91" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 345 'partselect' 'tmp_60' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 27> <Delay = 7.49>
+ST_28 : Operation 346 [1/1] (0.00ns)   --->   "%and_ln3 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_60, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 346 'bitconcatenate' 'and_ln3' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 347 [1/1] (0.00ns)   --->   "%sext_ln32_14 = sext i68 %mul_ln32" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 347 'sext' 'sext_ln32_14' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 348 [1/1] (3.74ns)   --->   "%add_ln32_6 = add i72 %and_ln3, i72 %sext_ln32_14" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 348 'add' 'add_ln32_6' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 349 [1/1] (0.00ns)   --->   "%tmp_61 = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln32_6, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 349 'partselect' 'tmp_61' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 350 [1/1] (0.00ns)   --->   "%and_ln32_3 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_61, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 350 'bitconcatenate' 'and_ln32_3' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 351 [1/1] (0.00ns)   --->   "%sext_ln32_18 = sext i68 %mul_ln32_3" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 351 'sext' 'sext_ln32_18' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 352 [1/1] (3.74ns)   --->   "%add_ln32_8 = add i72 %and_ln32_3, i72 %sext_ln32_18" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 352 'add' 'add_ln32_8' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 353 [1/1] (0.00ns)   --->   "%tmp_63 = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln32_8, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 353 'partselect' 'tmp_63' <Predicate = true> <Delay = 0.00>
+
+State 29 <SV = 28> <Delay = 7.49>
+ST_29 : Operation 354 [1/1] (0.00ns)   --->   "%and_ln32_4 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_63, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 354 'bitconcatenate' 'and_ln32_4' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 355 [1/1] (0.00ns)   --->   "%sext_ln32_22 = sext i68 %mul_ln32_4" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 355 'sext' 'sext_ln32_22' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 356 [1/1] (3.74ns)   --->   "%add_ln32_10 = add i72 %and_ln32_4, i72 %sext_ln32_22" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32]   --->   Operation 356 'add' 'add_ln32_10' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 357 [1/1] (0.00ns)   --->   "%tmp_65 = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln32_10, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 357 'partselect' 'tmp_65' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 358 [1/1] (0.00ns)   --->   "%and_ln4 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_65, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 358 'bitconcatenate' 'and_ln4' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 359 [1/1] (0.00ns)   --->   "%sext_ln40_14 = sext i68 %mul_ln40" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 359 'sext' 'sext_ln40_14' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 360 [1/1] (3.74ns)   --->   "%add_ln40_6 = add i72 %and_ln4, i72 %sext_ln40_14" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 360 'add' 'add_ln40_6' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 361 [1/1] (0.00ns)   --->   "%tmp_67 = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln40_6, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 361 'partselect' 'tmp_67' <Predicate = true> <Delay = 0.00>
+
+State 30 <SV = 29> <Delay = 7.49>
+ST_30 : Operation 362 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %d, i64 666, i64 207, i64 1"   --->   Operation 362 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 363 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %d, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 363 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 364 [1/1] (0.00ns)   --->   "%and_ln40_3 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_67, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 364 'bitconcatenate' 'and_ln40_3' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 365 [1/1] (0.00ns)   --->   "%sext_ln40_18 = sext i68 %mul_ln40_3" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 365 'sext' 'sext_ln40_18' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 366 [1/1] (3.74ns)   --->   "%add_ln40_8 = add i72 %and_ln40_3, i72 %sext_ln40_18" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 366 'add' 'add_ln40_8' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 367 [1/1] (0.00ns)   --->   "%tmp_69 = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln40_8, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 367 'partselect' 'tmp_69' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 368 [1/1] (0.00ns)   --->   "%and_ln40_4 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i32.i40, i32 %tmp_69, i40 0" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 368 'bitconcatenate' 'and_ln40_4' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 369 [1/1] (0.00ns)   --->   "%sext_ln40_22 = sext i68 %mul_ln40_4" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 369 'sext' 'sext_ln40_22' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 370 [1/1] (3.74ns)   --->   "%add_ln40_10 = add i72 %and_ln40_4, i72 %sext_ln40_22" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 370 'add' 'add_ln40_10' <Predicate = true> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 371 [1/1] (0.00ns)   --->   "%H = partselect i32 @_ssdm_op_PartSelect.i32.i72.i32.i32, i72 %add_ln40_10, i32 40, i32 71" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40]   --->   Operation 371 'partselect' 'H' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 372 [1/1] (0.00ns)   --->   "%ret_ln44 = ret i32 %H" [/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:44]   --->   Operation 372 'ret' 'ret_ln44' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.000ns.
+
+ <State 1>: 3.634ns
+The critical path consists of the following:
+	wire read operation ('s_read') on port 's' [3]  (0.000 ns)
+	'select' operation 22 bit ('select_ln30_14', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30) [200]  (0.701 ns)
+	'select' operation 22 bit ('select_ln30_15', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30) [201]  (0.000 ns)
+	'add' operation 42 bit ('add_ln30', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:30) [204]  (2.933 ns)
+
+ <State 2>: 7.342ns
+The critical path consists of the following:
+	'load' operation 32 bit ('d_load') on array 'd' [16]  (2.322 ns)
+	'select' operation 32 bit ('select_ln19', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [19]  (0.698 ns)
+	'select' operation 92 bit ('select_ln19_54', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [21]  (0.000 ns)
+	'add' operation 92 bit ('add_ln19', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [26]  (4.322 ns)
+
+ <State 3>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln32', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [215]  (7.458 ns)
+
+ <State 4>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln32', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [215]  (7.458 ns)
+
+ <State 5>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln32', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [215]  (7.458 ns)
+
+ <State 6>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln32_3', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [238]  (7.458 ns)
+
+ <State 7>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln32_4', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [261]  (7.458 ns)
+
+ <State 8>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln40', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [279]  (7.458 ns)
+
+ <State 9>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln40_3', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [299]  (7.458 ns)
+
+ <State 10>: 7.458ns
+The critical path consists of the following:
+	'mul' operation 68 bit ('mul_ln40_4', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [319]  (7.458 ns)
+
+ <State 11>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_34', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [92]  (4.322 ns)
+
+ <State 12>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_35', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [98]  (4.322 ns)
+
+ <State 13>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_36', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [106]  (4.322 ns)
+
+ <State 14>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_37', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [112]  (4.322 ns)
+
+ <State 15>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_38', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [118]  (4.322 ns)
+
+ <State 16>: 6.644ns
+The critical path consists of the following:
+	'load' operation 32 bit ('d_load_13') on array 'd' [121]  (2.322 ns)
+	'select' operation 71 bit ('select_ln19_83', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [123]  (0.000 ns)
+	'select' operation 92 bit ('select_ln19_84', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [125]  (0.000 ns)
+	'add' operation 92 bit ('add_ln19_39', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [126]  (4.322 ns)
+
+ <State 17>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_40', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [132]  (4.322 ns)
+
+ <State 18>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_41', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [138]  (4.322 ns)
+
+ <State 19>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_42', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [146]  (4.322 ns)
+
+ <State 20>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_43', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [152]  (4.322 ns)
+
+ <State 21>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_44', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [158]  (4.322 ns)
+
+ <State 22>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_45', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [166]  (4.322 ns)
+
+ <State 23>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_46', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [172]  (4.322 ns)
+
+ <State 24>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_47', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [178]  (4.322 ns)
+
+ <State 25>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_48', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [186]  (4.322 ns)
+
+ <State 26>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_49', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [192]  (4.322 ns)
+
+ <State 27>: 4.322ns
+The critical path consists of the following:
+	'add' operation 92 bit ('add_ln19_50', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:19) [198]  (4.322 ns)
+
+ <State 28>: 7.498ns
+The critical path consists of the following:
+	'add' operation 72 bit ('add_ln32_6', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [219]  (3.749 ns)
+	'add' operation 72 bit ('add_ln32_8', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [240]  (3.749 ns)
+
+ <State 29>: 7.498ns
+The critical path consists of the following:
+	'add' operation 72 bit ('add_ln32_10', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:32) [263]  (3.749 ns)
+	'add' operation 72 bit ('add_ln40_6', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [281]  (3.749 ns)
+
+ <State 30>: 7.498ns
+The critical path consists of the following:
+	'add' operation 72 bit ('add_ln40_8', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [301]  (3.749 ns)
+	'add' operation 72 bit ('add_ln40_10', /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:40) [321]  (3.749 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

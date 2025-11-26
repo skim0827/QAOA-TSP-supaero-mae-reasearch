@@ -1,0 +1,1499 @@
+---
+MainSourceFile:  /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          477403
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          477869
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          478336
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          761528
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      91
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      92
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      93
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      94
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      95
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      125
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      126
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      127
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      128
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      129
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      130
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      131
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      132
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      133
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      134
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      184
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      185
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      186
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      213
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      214
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      215
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      216
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      217
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      218
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      254
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      255
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hotbm_apfixed.h
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_61_1:  '
+    FileOffset:      61
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1213309
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_61_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_1:  '
+    FileOffset:      117
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1214127
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_289_1:  '
+    FileOffset:      289
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1216778
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_289_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_449_1:  '
+    FileOffset:      449
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1219505
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_449_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_629_1:  '
+    FileOffset:      629
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1222666
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_629_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_633_2:  '
+    FileOffset:      633
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1222747
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_633_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_743_1:  '
+    FileOffset:      743
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1225056
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_743_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_840_1:  '
+    FileOffset:      840
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1226554
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_840_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_859_2:  '
+    FileOffset:      859
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1226784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_859_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1173_1:  '
+    FileOffset:      1173
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1232974
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1173_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1256_1:  '
+    FileOffset:      1256
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1234577
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1256_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1242436
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_2:  '
+    FileOffset:      74
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1242586
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_78_3:  '
+    FileOffset:      78
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1242683
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_78_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_4:  '
+    FileOffset:      145
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1244547
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_151_5:  '
+    FileOffset:      151
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1244697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_151_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_155_6:  '
+    FileOffset:      155
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1244794
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_155_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_7:  '
+    FileOffset:      170
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1245175
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_178_8:  '
+    FileOffset:      178
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1245406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_178_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_243_9:  '
+    FileOffset:      243
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1248853
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_243_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_249_10:  '
+    FileOffset:      249
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1249005
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_249_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_253_11:  '
+    FileOffset:      253
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1249105
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_253_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_268_12:  '
+    FileOffset:      268
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1249487
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_268_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_276_13:  '
+    FileOffset:      276
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1249725
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_276_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_505_14:  '
+    FileOffset:      505
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1265280
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_505_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_511_15:  '
+    FileOffset:      511
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1265432
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_511_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_515_16:  '
+    FileOffset:      515
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1265531
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_515_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_525_17:  '
+    FileOffset:      525
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1265708
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_525_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_529_18:  '
+    FileOffset:      529
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1265806
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_529_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_539_19:  '
+    FileOffset:      539
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1266091
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_539_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_547_20:  '
+    FileOffset:      547
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1266346
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_547_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_908_21:  '
+    FileOffset:      908
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1298585
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_908_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_914_22:  '
+    FileOffset:      914
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1298737
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_914_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_918_23:  '
+    FileOffset:      918
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1298837
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_918_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1034_1:  '
+    FileOffset:      1034
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1301513
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1034_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1040_2:  '
+    FileOffset:      1040
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1301663
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1040_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1044_3:  '
+    FileOffset:      1044
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1301761
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1044_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1131_4:  '
+    FileOffset:      1131
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1305231
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1131_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1137_5:  '
+    FileOffset:      1137
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1305382
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1137_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1141_6:  '
+    FileOffset:      1141
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1305481
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1141_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1160_7:  '
+    FileOffset:      1160
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1305961
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1160_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_8:  '
+    FileOffset:      1167
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1306203
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1283_9:  '
+    FileOffset:      1283
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1311775
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1283_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1289_10:  '
+    FileOffset:      1289
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1311927
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1289_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1293_11:  '
+    FileOffset:      1293
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1312026
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1293_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1313_12:  '
+    FileOffset:      1313
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1312535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1313_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1320_13:  '
+    FileOffset:      1320
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1312784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1320_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1582_14:  '
+    FileOffset:      1582
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1330141
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1582_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1588_15:  '
+    FileOffset:      1588
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1330293
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1588_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1592_16:  '
+    FileOffset:      1592
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1330393
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1592_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1616_17:  '
+    FileOffset:      1616
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1330867
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1616_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1623_18:  '
+    FileOffset:      1623
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1331134
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1623_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2053_19:  '
+    FileOffset:      2053
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1369705
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2053_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2059_20:  '
+    FileOffset:      2059
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1369857
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2059_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2063_21:  '
+    FileOffset:      2063
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1369957
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2063_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2193_1:  '
+    FileOffset:      2193
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1372577
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2193_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2200_2:  '
+    FileOffset:      2200
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1372740
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2200_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2204_3:  '
+    FileOffset:      2204
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1372832
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2204_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2251_4:  '
+    FileOffset:      2251
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1374441
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2251_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2258_5:  '
+    FileOffset:      2258
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1374603
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2258_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2262_6:  '
+    FileOffset:      2262
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1374695
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2262_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2280_7:  '
+    FileOffset:      2280
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1375068
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2280_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2335_8:  '
+    FileOffset:      2335
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1377534
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2335_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2342_9:  '
+    FileOffset:      2342
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1377701
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2342_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2346_10:  '
+    FileOffset:      2346
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1377794
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2346_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2364_11:  '
+    FileOffset:      2364
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1378175
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2364_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2453_12:  '
+    FileOffset:      2453
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1383616
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2453_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2460_13:  '
+    FileOffset:      2460
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1383784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2460_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2464_14:  '
+    FileOffset:      2464
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1383878
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2464_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2474_15:  '
+    FileOffset:      2474
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1384049
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2474_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2478_16:  '
+    FileOffset:      2478
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1384140
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2478_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2489_17:  '
+    FileOffset:      2489
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1384422
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2489_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2497_18:  '
+    FileOffset:      2497
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1384609
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2497_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2822_19:  '
+    FileOffset:      2822
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1419079
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2822_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2829_20:  '
+    FileOffset:      2829
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1419247
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2829_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2833_21:  '
+    FileOffset:      2833
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1419341
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2833_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2921_1:  '
+    FileOffset:      2921
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1421143
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2921_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2928_2:  '
+    FileOffset:      2928
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1421251
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2928_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2932_3:  '
+    FileOffset:      2932
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1421322
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2932_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_4:  '
+    FileOffset:      2947
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1421610
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2979_5:  '
+    FileOffset:      2979
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1422824
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2979_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2986_6:  '
+    FileOffset:      2986
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1422935
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2986_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2990_7:  '
+    FileOffset:      2990
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1423008
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2990_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_8:  '
+    FileOffset:      3005
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1423303
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3055_9:  '
+    FileOffset:      3055
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1426636
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3055_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3062_10:  '
+    FileOffset:      3062
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1426747
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3062_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3066_11:  '
+    FileOffset:      3066
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1426820
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3066_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_12:  '
+    FileOffset:      3081
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1427116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3218_13:  '
+    FileOffset:      3218
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1446428
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3218_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3225_14:  '
+    FileOffset:      3225
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1446542
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3225_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3229_15:  '
+    FileOffset:      3229
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1446617
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3229_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_16:  '
+    FileOffset:      3244
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1446904
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3404_17:  '
+    FileOffset:      3404
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1472514
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3404_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3411_18:  '
+    FileOffset:      3411
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1472628
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3411_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3415_19:  '
+    FileOffset:      3415
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_exp_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1472705
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3415_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_703_1:  '
+    FileOffset:      703
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1506788
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_703_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_921_1:  '
+    FileOffset:      921
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1515177
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_921_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1345_1:  '
+    FileOffset:      1345
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_log_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1534154
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1345_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_240_1:  '
+    FileOffset:      240
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1549028
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_240_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_268_2:  '
+    FileOffset:      268
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1549549
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_268_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_48_1:  '
+    FileOffset:      48
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1565496
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_48_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_109_2:  '
+    FileOffset:      109
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1566650
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_109_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_3:  '
+    FileOffset:      123
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1566959
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_4:  '
+    FileOffset:      153
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1567469
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_281_1:  '
+    FileOffset:      281
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1569391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_281_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_301_2:  '
+    FileOffset:      301
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1569756
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_301_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_3:  '
+    FileOffset:      315
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1570064
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_433_1:  '
+    FileOffset:      433
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1571896
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_433_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_447_2:  '
+    FileOffset:      447
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_pow_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1572221
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_447_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_33_1:  '
+    FileOffset:      33
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1574892
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_33_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_1:  '
+    FileOffset:      183
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1577796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_248_1:  '
+    FileOffset:      248
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_diff_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1579087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_1:  '
+    FileOffset:      16
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590047
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590222
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_38_1:  '
+    FileOffset:      38
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590383
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_38_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590545
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_60_1:  '
+    FileOffset:      60
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590719
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_60_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_71_1:  '
+    FileOffset:      71
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1590894
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_71_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_82_1:  '
+    FileOffset:      82
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1591055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_82_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_1:  '
+    FileOffset:      93
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_all_any_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1591217
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_1:  '
+    FileOffset:      26
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_mad_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1662905
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_1:  '
+    FileOffset:      40
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cbrt_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1664660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1669197
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_81_2:  '
+    FileOffset:      81
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1669932
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_81_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_3:  '
+    FileOffset:      169
+    FilePath:        /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_hypot_apfixed.h
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          1671621
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_9_1:  '
+    FileOffset:      9
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2433733
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_9_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_2:  '
+    FileOffset:      13
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2433796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_15_3:  '
+    FileOffset:      15
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2433850
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_15_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_4:  '
+    FileOffset:      27
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2434193
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_5:  '
+    FileOffset:      29
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2434260
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_6:  '
+    FileOffset:      35
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2434451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_37_7:  '
+    FileOffset:      37
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2434519
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_37_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_1:  '
+    FileOffset:      52
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2434901
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_60_2:  '
+    FileOffset:      60
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2435052
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_60_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2435261
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_70_2:  '
+    FileOffset:      70
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2435326
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_70_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2435714
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_1:  '
+    FileOffset:      116
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2436264
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_2P_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      122
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_2P_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      123
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_2P_BRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      124
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_127_2:  '
+    FileOffset:      127
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2436573
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_127_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_131_3:  '
+    FileOffset:      131
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2436655
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_131_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_4:  '
+    FileOffset:      132
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2436702
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_5:  '
+    FileOffset:      134
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2436758
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_140_6:  '
+    FileOffset:      140
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2437046
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_140_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_166_7:  '
+    FileOffset:      166
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2437811
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_166_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_1:  '
+    FileOffset:      177
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2438133
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_1:  '
+    FileOffset:      201
+    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
+    Replacements:    
+      - FilePath:        /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
+        Offset:          2438724
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_1: '
+...

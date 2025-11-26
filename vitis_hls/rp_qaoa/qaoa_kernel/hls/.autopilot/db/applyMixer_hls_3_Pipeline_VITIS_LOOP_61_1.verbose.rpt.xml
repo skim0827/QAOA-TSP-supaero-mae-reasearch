@@ -1,0 +1,151 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'applyMixer_hls_3_Pipeline_VITIS_LOOP_61_1'" level="0">
+<item name = "Date">Thu Nov 20 16:57:53 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">qaoa_kernel</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z010-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.592 ns, 2.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">134, 134, 1.340 us, 1.340 us, 133, 133, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_61_1">132, 132, 3, 2, 1, 66, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1046, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">4, -, 0, 0, -</column>
+<column name="Multiplexer">-, -, 0, 77, -</column>
+<column name="Register">-, -, 605, -, -</column>
+<specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
+<specialColumn name="Utilization (%)">3, 0, 1, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="circ_table_arctan_1289_U">applyCost_hls_3_s_cordic_apfixed_circ_table_arctan_128_ROM_AUTO_1R, 4, 0, 0, 0, 128, 126, 1, 16128</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln61_fu_150_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln76_fu_203_p2">+, 0, 0, 73, 66, 66</column>
+<column name="add_ln78_fu_248_p2">+, 0, 0, 73, 66, 66</column>
+<column name="add_ln82_fu_215_p2">+, 0, 0, 73, 66, 66</column>
+<column name="sub_ln77_fu_207_p2">-, 0, 0, 73, 66, 66</column>
+<column name="sub_ln81_fu_211_p2">-, 0, 0, 73, 66, 66</column>
+<column name="sub_ln83_fu_253_p2">-, 0, 0, 73, 66, 66</column>
+<column name="x_s_fu_165_p2">ashr, 0, 0, 190, 66, 66</column>
+<column name="y_s_fu_171_p2">ashr, 0, 0, 190, 66, 66</column>
+<column name="icmp_ln61_fu_144_p2">icmp, 0, 0, 14, 7, 7</column>
+<column name="tx_fu_219_p3">select, 0, 0, 66, 1, 66</column>
+<column name="ty_fu_227_p3">select, 0, 0, 66, 1, 66</column>
+<column name="tz_fu_258_p3">select, 0, 0, 66, 1, 66</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="empty_55_fu_56">9, 2, 66, 132</column>
+<column name="empty_56_fu_60">9, 2, 66, 132</column>
+<column name="empty_fu_52">9, 2, 66, 132</column>
+<column name="n_fu_64">9, 2, 7, 14</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="d_reg_337">1, 0, 1, 0</column>
+<column name="empty_55_fu_56">66, 0, 66, 0</column>
+<column name="empty_56_fu_60">66, 0, 66, 0</column>
+<column name="empty_fu_52">66, 0, 66, 0</column>
+<column name="icmp_ln61_reg_310">1, 0, 1, 0</column>
+<column name="n_fu_64">7, 0, 7, 0</column>
+<column name="p_load6_reg_298">66, 0, 66, 0</column>
+<column name="p_load7_reg_331">66, 0, 66, 0</column>
+<column name="p_load_reg_304">66, 0, 66, 0</column>
+<column name="tmp_s_reg_342">63, 0, 63, 0</column>
+<column name="x_s_reg_314">66, 0, 66, 0</column>
+<column name="y_s_reg_320">66, 0, 66, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, applyMixer_hls&lt;3&gt;_Pipeline_VITIS_LOOP_61_1, return value</column>
+<column name="sext_ln61">in, 65, ap_none, sext_ln61, scalar</column>
+<column name="p_out">out, 65, ap_vld, p_out, pointer</column>
+<column name="p_out_ap_vld">out, 1, ap_vld, p_out, pointer</column>
+<column name="p_out1">out, 65, ap_vld, p_out1, pointer</column>
+<column name="p_out1_ap_vld">out, 1, ap_vld, p_out1, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,2104 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_cordic_apfixed.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_hls_cordic_apfixed.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.45826
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_cordic_apfixed.cpp, 
+                       Line: 41, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_hls_cordic_apfixed.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_common/objs/src/common/hls_cordic_apfixed.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1268, Column: 12 }
+Function:        _ZN3hls4sqrtILi32ELi12EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> sqrt_fixed<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_sqrt_apfixed.h, 
+                       Line: 17, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1267, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 53, Column: 13 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - Callee:          'bool is_valid_onehot<3>(unsigned int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 67, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 61, Column: 71 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 38, Column: 43 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - Callee:          'Z_eigenvalue_uint(unsigned int, int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 82, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 240, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_
+Args:            
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<34, 3, 0>(ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 217, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_
+Args:            
+  - Callee:          'void cordic_apfixed::circ_range_redux<32, 12, 33>(ap_ufixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<33, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _ZN3hls3cosILi32ELi12EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1941, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1925, Column: 9 }
+Function:        _ZN3hls3sinILi32ELi12EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1922, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 87, Column: 19 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 90, Column: 18 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ComplexQ::operator*=(ComplexQ const&)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 64, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 90, Column: 21 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 240, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_
+Args:            
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<66, 3, 0>(ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 217, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_
+Args:            
+  - Callee:          'void cordic_apfixed::circ_range_redux<64, 24, 65>(ap_ufixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<65, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _ZN3hls3cosILi64ELi24EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1941, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1925, Column: 9 }
+Function:        _ZN3hls3sinILi64ELi24EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1922, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 56, Column: 16 }
+Function:        _ZNK8ComplexQmlERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 62, Column: 16 }
+Function:        _ZNK8ComplexQmiERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 59, Column: 16 }
+Function:        _ZNK8ComplexQplERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 152, Column: 67 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 152, Column: 86 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 152, Column: 69 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 111, Column: 14 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::ComplexQ()'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 151, Column: 66 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 198, Column: 5 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 202, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 203, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 182, Column: 19 }
+Function:        _Z16expectation_costILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEP8ComplexQPAT__KS3_Pj
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 221, Column: 11 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'ComplexQ::ComplexQ()'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 225, Column: 2 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 228, Column: 23 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 35, Column: 22 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_35_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 37, Column: 26 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_37_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 27, Column: 22 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_27_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 29, Column: 26 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_29_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 9, Column: 21 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_9_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 13, Column: 19 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 15, Column: 19 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_35_6
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:35:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_37_7
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:37:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_37_7
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:37:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_37_7
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:37:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_27_4
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:27:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_29_5
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:29:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_29_5
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:29:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_29_5
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:29:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_9_1
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:9:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_9_1
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:9:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_15_3
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:15:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'costHamiltonian<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 51, Column: 17 }
+Function:        _ZN8ComplexQC2Ev.266
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'ap_fixed_base<32, 12, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double) (.79)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 51, Column: 26 }
+Function:        _ZN8ComplexQC2Ev.266
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'ap_fixed_base<32, 12, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(double) (.79)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 61, Column: 20 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - Callee:          'bool is_valid_onehot<3>(unsigned int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 67, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 61, Column: 49 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 17, Column: 29 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - Callee:          'Z_eigenvalue_uint(unsigned int, int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 82, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 217, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.88
+Args:            
+  - Callee:          'void cordic_apfixed::circ_range_redux<32, 12, 33>(ap_ufixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<33, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 240, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.88
+Args:            
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<34, 3, 0>(ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _ZN3hls3cosILi32ELi12EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1941, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1925, Column: 9 }
+Function:        _ZN3hls3sinILi32ELi12EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1922, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 87, Column: 19 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 90, Column: 21 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 90, Column: 18 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - Callee:          'ComplexQ::operator*=(ComplexQ const&)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 64, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 217, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.133
+Args:            
+  - Callee:          'void cordic_apfixed::circ_range_redux<64, 24, 65>(ap_ufixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<65, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 240, Column: 5 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.133
+Args:            
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<66, 3, 0>(ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _ZN3hls3cosILi64ELi24EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1941, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1925, Column: 9 }
+Function:        _ZN3hls3sinILi64ELi24EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1922, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 56, Column: 16 }
+Function:        _ZNK8ComplexQmlERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 62, Column: 16 }
+Function:        _ZNK8ComplexQmiERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 59, Column: 16 }
+Function:        _ZNK8ComplexQplERKS_
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 111, Column: 14 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::ComplexQ()'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 151, Column: 45 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 151, Column: 62 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 151, Column: 66 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 152, Column: 67 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 198, Column: 5 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 202, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 203, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_
+Args:            
+  - Callee:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 182, Column: 19 }
+Function:        _Z16expectation_costILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEP8ComplexQPAT__KS3_Pj
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 221, Column: 11 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'ComplexQ::ComplexQ() (.266)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 225, Column: 2 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 228, Column: 23 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_qaoa_kernel_ir
+Args:            
+  - Callee:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_qaoa_kernel_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bool is_valid_onehot<3>(unsigned int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 67, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 5, Column: 0 }
+Function:        _Z15costHamiltonianILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEjPAT__KS3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Z_eigenvalue_uint(unsigned int, int)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 82, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 202, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.88
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<32, 12, 33>(ap_ufixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<33, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 202, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi32ELi12EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.88
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<34, 3, 0>(ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<34, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 81, Column: 0 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 81, Column: 0 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::operator*=(ComplexQ const&)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 64, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 202, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.133
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<64, 24, 65>(ap_ufixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<65, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                   Line: 202, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi64ELi24EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.133
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<66, 3, 0>(ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<66, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 55, Column: 0 }
+Function:        _ZNK8ComplexQmlERKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 61, Column: 0 }
+Function:        _ZNK8ComplexQmiERKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                   Line: 58, Column: 0 }
+Function:        _ZNK8ComplexQplERKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 99, Column: 0 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ()'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 99, Column: 0 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 99, Column: 0 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::operator*(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 99, Column: 0 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::operator-(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 61, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 99, Column: 0 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::operator+(ComplexQ const&) const'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 58, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 212, Column: 0 }
+Function:        qaoa_kernel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ComplexQ::ComplexQ() (.266)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.hpp, 
+                       Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 68, Column: 22 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_68_1
+  - String:          ' '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:68:22'
+  - String:          ' '
+  - Function:        'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:111:14'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:112:14'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_116_1
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:116:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_134_5
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:134:35'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_166_7
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:166:23'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_60_2
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:60:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        unknown
+  - String:          '> at '
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:221:11'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 68, Column: 22 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_68_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 70, Column: 26 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_68_1
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:68:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'build_feasible_superposition<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'build_feasible_superposition<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'build_feasible_superposition<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 46, Column: 0 }
+Function:        _Z28build_feasible_superpositionILi3EEiP8ComplexQ
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_70_2
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:70:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'build_feasible_superposition<3>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 182, Column: 19 }
+Function:        _Z16expectation_costILi3EE8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEP8ComplexQPAT__KS3_Pj
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3])'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-extract-cfg-in-dataflow
+Name:            LoopExtractionForDataflow
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 221, Column: 11 }
+Function:        qaoa_kernel
+Args:            
+  - String:          'Changing loop '''
+  - LoopName:        Loop_arrayctor.loop_proc
+  - String:          ''' ('
+  - LoopLoc:         '/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:221:11'
+  - String:          ') to a process function for dataflow in function '''
+  - Name:            qaoa_kernel
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 87, Column: 19 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_.1
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> costHamiltonian<3>(unsigned int, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3]) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 5, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _Z13applyCost_hlsILi3EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_.1
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<32, 12>(ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((32) - (12)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.88)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1944, Column: 9 }
+Function:        _Z14applyMixer_hlsILi3EEvP8ComplexQ8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EE
+Args:            
+  - Callee:          'void cordic_apfixed::generic_sincos<64, 24>(ap_fixed<64, 24, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((64) - (24)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.133)'
+    DebugLoc:        { File: /usr/local/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/hls_cordic_apfixed.h, 
+                       Line: 202, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 198, Column: 5 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_.1
+Args:            
+  - Callee:          'int build_feasible_superposition<3>(ComplexQ*)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 46, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 202, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_.1
+Args:            
+  - Callee:          'void applyCost_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 81, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 203, Column: 9 }
+Function:        _Z12qaoaStep_hlsILi3ELi1EEvP8ComplexQPAT__K8ap_fixedILi32ELi12EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS6_S9_.1
+Args:            
+  - Callee:          'void applyMixer_hls<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 225, Column: 2 }
+Function:        Block_entry_state.re_wr_d_rd_proc
+Args:            
+  - Callee:          'void qaoaStep_hls<3, 1>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 197, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          Block_entry_state.re_wr_d_rd_proc
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 231, Column: 23 }
+Function:        Block_entry_state.re_wr_d_rd_proc
+Args:            
+  - Callee:          'ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> expectation_cost<3>(ComplexQ*, ap_fixed<32, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [3], unsigned int*) (.1)'
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          Block_entry_state.re_wr_d_rd_proc
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                   Line: 225, Column: 2 }
+Function:        qaoa_kernel
+Args:            
+  - Callee:          Block_entry_state.re_wr_d_rd_proc
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          qaoa_kernel
+    DebugLoc:        { File: /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp, 
+                       Line: 212, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
