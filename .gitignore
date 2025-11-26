@@ -1,2 +1,31 @@
-.vscode/
+# Vivado / Vitis generated stuff
+*.log
+*.jou
+*.str
+*.cache/
+*.runs/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.srcs/
+*.xpr
+*.xsa
+*.xpfm
+*.bin
+*.elf
 *.o
+*.a
+*.swp
+.DS_Store
+
+# Vitis workspace auto-generated
+/.metadata/
+/Debug/
+/Release/
+/.vscode/
+
+# Build directories
+build/
+.export/
+platform/export/
+app/build/
