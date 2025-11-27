@@ -22,4 +22,4 @@ build/
 Debug/
 Release/
 .Xil/
-*.json
+compile_commands.json
