@@ -17,5 +17,9 @@
 .pdi
 .vitisWorkspace.json
 
-_ide/logs
-_ide/.wsdata
+_ide/
+build/
+Debug/
+Release/
+.Xil/
+*.json
