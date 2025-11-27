@@ -1,8 +1,0 @@
----
-MainSourceFile:  /home/master25/mae26/s.kim/RP/vitis_hls/rp_qaoa/qaoa_kernel/hls/.autopilot/db/qaoa.pp.0.cpp
-Diagnostics:     
-  - DiagnosticName:  clang-diagnostic-warning
-    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
-    FileOffset:      '223:9'
-    FilePath:        /home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp
-...

@@ -1,4 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:68:22" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/qaoa.cpp:68:22" LoopName="VITIS_LOOP_68_1" ParentFunc="int build_feasible_superposition&lt;3&gt;(ComplexQ*)"/>
-</VitisHLS:BurstInfo>
-

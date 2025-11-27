@@ -1,2 +1,0 @@
-Expectation value = 37.8458
-Best state = 100100100
