@@ -29,3 +29,7 @@ build/
 .export/
 platform/export/
 app/build/
+
+
+_ide/
+.rigel_looper
