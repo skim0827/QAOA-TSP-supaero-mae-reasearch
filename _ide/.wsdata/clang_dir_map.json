@@ -1,8 +1,0 @@
-{
-  "workspaceRoot": "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch",
-  "mapping": {
-    "qaoa.hpp": "vitis_hls/rp_qaoa",
-    "tb.cpp": "vitis_hls/rp_qaoa",
-    "qaoa.cpp": "vitis_hls/rp_qaoa"
-  }
-}
