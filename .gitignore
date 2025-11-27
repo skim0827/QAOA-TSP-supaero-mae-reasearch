@@ -34,3 +34,4 @@ app/build/
 _ide/
 .rigel_lopper
 vitis_hls/
+HLS_codes/*.o
