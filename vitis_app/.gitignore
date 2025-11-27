@@ -1,6 +1,10 @@
 # Ignore build output directory
 /build
 /export
+Debug/
+Release/
+.Xil/
+build/
 
 # Ignore object files and dependent files
 .o
@@ -18,5 +22,6 @@
 .vitisWorkspace.json
 
 _ide/
-.rigel_looper
-*.json
+.rigel_lopper/
+compile_commands.json
+.clangd
