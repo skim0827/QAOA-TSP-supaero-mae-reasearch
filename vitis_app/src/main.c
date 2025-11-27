@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include "xiltimer.h"
+
+
 
 // ----- float -> ap_fixed<32,12> -----
 static inline uint32_t float_to_fixed(float x){
@@ -48,8 +51,13 @@ int main() {
     // ---------------------------
     // 4. Start accelerator ap_start = 1
     // ---------------------------
+    XTime t0, t1;
+    XTime_GetTime(&t0);
     reg[0] = 1;
     while ((reg[0] & 0x2) == 0);   // wait ap_done
+    XTime_GetTime(&t1);
+    double fpga_ms = (double)(t1 - t0) / (COUNTS_PER_SECOND / 1000.0);
+    printf("FPGA time = %f ms\n", fpga_ms);
 
     // ---------------------------
     // 5. Read results

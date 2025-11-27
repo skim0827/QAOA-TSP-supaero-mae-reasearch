@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.16)
 
 if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   file(REMOVE_RECURSE
-  "/home/master25/mae26/s.kim/RP/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/sleep.h"
-  "/home/master25/mae26/s.kim/RP/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xiltimer.h"
-  "/home/master25/mae26/s.kim/RP/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xtimer_config.h"
-  "/home/master25/mae26/s.kim/RP/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/lib/libxiltimer.a"
+  "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/sleep.h"
+  "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xiltimer.h"
+  "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xtimer_config.h"
+  "/home/master25/mae26/s.kim/RP/QAOA-TSP-supaero-mae-reasearch/vitis_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/lib/libxiltimer.a"
   )
 endif()
