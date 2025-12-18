@@ -1,10 +1,10 @@
 #include "xparameters.h"
 #define QAOA_BASE XPAR_QAOA_KERNEL_0_BASEADDR
-
+#include "xuartps.h"
 #include <stdio.h>
 #include <stdint.h>
 #include "xiltimer.h"
-
+#include <nlopt.hpp>
 
 
 // ----- float -> ap_fixed<32,12> -----
@@ -18,6 +18,34 @@ static inline float fixed_to_float(uint32_t x){
 }
 
 int main() {
+    // ---------------------------
+    // UART 
+    // ---------------------------
+    XUartPs uart;
+    XUartPs_Config *cfg;
+    cfg = XUartPs_LookupConfig(XPAR_DEVICE_ID);
+    XUartPs_CfgInitialize(&uart, cfg, cfg->BaseAddress);
+    XUartPs_SetBaudRate(&uart, 115200);
+
+
+    char buf[64];
+    int i = 0;
+
+    // PC -> ARM wait until newline
+    while (1) {
+        if (XUartPs_IsReceiveData(uart.Config.BaseAddress)) {
+            buf[i++] = XUartPs_ReadReg(uart.Config.BaseAddress,
+                                    XUARTPS_FIFO_OFFSET);
+            if (buf[i-1] == '\n') break;
+        }
+    }
+    buf[i] = 0;
+
+    float gamma, beta;
+    sscanf(buf, "%f %f", &gamma, &beta);
+
+
+
 
     volatile uint32_t *reg = (uint32_t*)QAOA_BASE;
 
@@ -40,8 +68,8 @@ int main() {
     // ---------------------------
     // 2. Write gamma, beta
     // ---------------------------
-    reg[6] = float_to_fixed(0.8f);
-    reg[8] = float_to_fixed(1.5f);
+    reg[6] = float_to_fixed(gamma);
+    reg[8] = float_to_fixed(beta);    
 
     // ---------------------------
     // 3. get_best_state = 1
@@ -64,8 +92,16 @@ int main() {
     // ---------------------------
     uint32_t best_state_raw = reg[12];
     uint32_t expect_raw     = reg[4];
-
     float expectation = fixed_to_float(expect_raw);
+
+    // ARM -> PC 
+    char out[64];
+    sprintf(out, "%f\n", expectation);
+    for (int i = 0; out[i] != 0; i++) {
+    XUartPs_WriteReg(uart.Config.BaseAddress,
+                     XUARTPS_FIFO_OFFSET,
+                     out[i]);
+    }
 
     printf("Best state  = %u\n", best_state_raw);
     printf("Expectation = %f\n", expectation);
