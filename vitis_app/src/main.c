@@ -1,12 +1,12 @@
 #include "xparameters.h"
-#define QAOA_BASE XPAR_QAOA_KERNEL_0_BASEADDR
-volatile uint32_t *qaoa = (uint32_t*)QAOA_BASE;
 #include "xuartps.h"
 #include <stdio.h>
 #include <stdint.h>
 #include "xiltimer.h"
-#include <nlopt.hpp>
-
+#include "xuartps_hw.h"
+//#include <nlopt.hpp>
+#define QAOA_BASE XPAR_QAOA_KERNEL_0_BASEADDR
+volatile uint32_t *qaoa = (uint32_t*)QAOA_BASE;
 
 // ----- float -> ap_fixed<32,12> -----
 static inline uint32_t float_to_fixed(float x){
@@ -24,7 +24,7 @@ static inline float fixed_to_float(uint32_t x){
 XUartPs uart;
 void uart_init(){ 
     XUartPs_Config *cfg;
-    cfg = XUartPs_LookupConfig(XPAR_DEVICE_ID);
+    cfg = XUartPs_LookupConfig(0);
     XUartPs_CfgInitialize(&uart, cfg, cfg->BaseAddress);
     XUartPs_SetBaudRate(&uart, 115200);
 }
@@ -44,14 +44,14 @@ void uart_recv_PC(char *buf){
 
 void run_fpga(){
     qaoa[0] = 1; // ap_start 
-    while((qaoa[0] & 0x2) == 0)); // wait until ap_done
+    while((qaoa[0] & 0x2) == 0); // wait until ap_done
 }
 
 void uart_send_to_pc(float v){
     char buf[32]; 
     sprintf(buf, "%f\n", v); 
     for (int i = 0; buf[i]; i++){ 
-        XUartPs_Write_Reg(uart.Config.BaseAdress, XUARTPS_FIFO_OFFSET, buf[i]); 
+        XUartPs_WriteReg(uart.Config.BaseAddress, XUARTPS_FIFO_OFFSET, buf[i]); 
     }    
 }
 
@@ -66,7 +66,7 @@ int main() {
 
     // 1. receive from PC
         uart_recv_PC(buf); 
-        sscanf(buf, "%f %f", &gamma, &beta)
+        sscanf(buf, "%f %f", &gamma, &beta);
 
     // 2. write to fpga
         qaoa[6] = float_to_fixed(gamma);
