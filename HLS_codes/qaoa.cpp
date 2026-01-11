@@ -205,7 +205,7 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM], const qfix d[N_CITY][N_CI
 }
 
 extern "C"
-float qaoa_kernel(const qfix d[3][3],
+void qaoa_kernel(const qfix d[3][3],
                    const qfix gamma[1],
                    const qfix beta[1],
                    bool get_best_state,
@@ -217,17 +217,17 @@ float qaoa_kernel(const qfix d[3][3],
 #pragma HLS INTERFACE s_axilite port=beta           bundle=control
 #pragma HLS INTERFACE s_axilite port=get_best_state bundle=control
 #pragma HLS INTERFACE s_axilite port=best_state     bundle=control
+#pragma HLS INTERFACE s_axilite port=expectation     bundle=control
     ComplexQ state[Config<3>::DIM];
 
 #pragma HLS DATAFLOW
-    qaoaStep_hls<3, 1>(state, d, gamma, beta); 
+    
+    qaoaStep_hls<3, 1>(state, d, gamma, beta);
 
-    if (get_best_state) {
-        return (float)expectation_cost<3>(state, d, best_state);
-    } else {
-        uint32_t dummy;
-        return (float)expectation_cost<3>(state, d, &dummy);
-    }
+    uint32_t dummy;
+    *expectation = get_best_state
+        ? expectation_cost<3>(state, d, best_state)
+        : expectation_cost<3>(state, d, &dummy);
 }
 
 

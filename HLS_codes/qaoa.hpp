@@ -132,10 +132,11 @@ void qaoaStep_hls(ComplexQ state[Config<N_CITY>::DIM],
                   const qfix beta[P]);
 
 extern "C"
-float qaoa_kernel(const qfix d[3][3],
+void qaoa_kernel(const qfix d[3][3],
                    const qfix gamma[1],
                    const qfix beta[1],
                    bool get_best_state,
-                   uint32_t *best_state);
+                   uint32_t *best_state,
+                   qfix *expectation);
 
 #endif // QAOA_H
