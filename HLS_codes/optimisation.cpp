@@ -5,7 +5,9 @@
 #include <bitset>
 #include <nlopt.hpp>
 #include <vector>
-
+// screen /dev/ttyUSB0 115200
+// picocom /dev/ttyUSB0 -b 115200
+//ls /dev/ttyUSB*
 
 // =========================================================
 // uart helper 
@@ -15,27 +17,41 @@
 #include <termios.h>
 
 int uart_fd;
-
-void uart_init(const char* dev = "/dev/ttyUSB1"){
-    uart_fd = open(dev, O_RDWR, O_NOCTTY); 
-
+void uart_init(const char* dev = "/dev/ttyUSB1")
+{
+    uart_fd = open(dev, O_RDWR | O_NOCTTY | O_SYNC);
     if (uart_fd < 0) {
         perror("uart open failed");
         exit(1);
     }
+
     struct termios tty{};
-    tcgetattr(uart_fd, &tty); // read current setting 
+    if (tcgetattr(uart_fd, &tty) != 0) {
+        perror("tcgetattr");
+        exit(1);
+    }
+
+    // Baud rate: MUST match Zybo
     cfsetospeed(&tty, B115200);
-    cfsetispeed(&tty, B1152000);
+    cfsetispeed(&tty, B115200);
 
-    tty.c_cflag |= (CLOCAL | CREAD);
-    tty.c_cflag &= ~CSIZE; 
-    tty.c_cflag |= CS8;
-    tty.c_cflag &= ~PARENB; 
-    tty.c_cflag &= ~CSTOPB;
-    
-    tcsetattr(uart_fd, TCSANOW, &tty);
+    // 8N1
+    tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8;
+    tty.c_cflag |= CLOCAL | CREAD;
+    tty.c_cflag &= ~(PARENB | CSTOPB | CRTSCTS);
 
+    // Raw mode (VERY important)
+    tty.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG);
+    tty.c_iflag &= ~(IXON | IXOFF | IXANY);
+    tty.c_oflag &= ~OPOST;
+
+    if (tcsetattr(uart_fd, TCSANOW, &tty) != 0) {
+        perror("tcsetattr");
+        exit(1);
+    }
+
+    // Clear any garbage in UART buffers
+    tcflush(uart_fd, TCIOFLUSH);
 }
 
 // =========================================================
@@ -122,6 +138,7 @@ void qaoa_kernel_debug(const double d[3][3],
 int main() {
 
     uart_init();
+    std::cout << "============== uart initialised ==================\n";
 
     // --- Set up NLopt (Nelder–Mead) ---
     nlopt::opt opt(nlopt::LN_NELDERMEAD, 2); // parameters to optimise
@@ -131,11 +148,14 @@ int main() {
     opt.set_xtol_rel(1e-4);
     
     // --- Run optimizer ---
+    std::cout << "============== Running optimiser==================\n";
+    static int iteration = 0; 
+
     std::vector<double> x = {0.5, 0.5};
     double min_expectation ;
     nlopt::result result = opt.optimize(x, min_expectation);
 
-    std::cout << "Optimisation finished\n";
+    std::cout << "============== Optimisation finished==================\n";
     std::cout << "gamma = " << x[0] << "\n";
     std::cout << "beta  = " << x[1] << "\n";
     std::cout << "expectation = " << min_expectation << "\n";    
