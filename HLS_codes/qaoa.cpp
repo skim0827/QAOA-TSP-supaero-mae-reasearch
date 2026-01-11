@@ -209,19 +209,17 @@ float qaoa_kernel(const qfix d[3][3],
                    const qfix gamma[1],
                    const qfix beta[1],
                    bool get_best_state,
-                   uint32_t *best_state) {
+                   uint32_t *best_state,
+                   qfix *expectation) {
 #pragma HLS INTERFACE s_axilite port=return         bundle=control
 #pragma HLS INTERFACE s_axilite port=d              bundle=control
 #pragma HLS INTERFACE s_axilite port=gamma          bundle=control
 #pragma HLS INTERFACE s_axilite port=beta           bundle=control
 #pragma HLS INTERFACE s_axilite port=get_best_state bundle=control
 #pragma HLS INTERFACE s_axilite port=best_state     bundle=control
-
-
     ComplexQ state[Config<3>::DIM];
 
 #pragma HLS DATAFLOW
-
     qaoaStep_hls<3, 1>(state, d, gamma, beta); 
 
     if (get_best_state) {
@@ -231,9 +229,6 @@ float qaoa_kernel(const qfix d[3][3],
         return (float)expectation_cost<3>(state, d, &dummy);
     }
 }
-
-
-
 
 
 // template qfix costHamiltonian<3>(uint32_t s, const qfix d[3][3]);
