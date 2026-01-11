@@ -11,13 +11,13 @@ int main(){
     qfix beta[1]  = { 1.5 };
     uint32_t best_state = 0; 
     auto start = std::chrono::high_resolution_clock::now();
-
-    double result = qaoa_kernel(d, gamma, beta, true, &best_state); 
+    qfix expectation;   // real storage
+    qaoa_kernel(d, gamma, beta, true, &best_state, &expectation); 
 
     auto stop = std::chrono::high_resolution_clock::now();
     double ms = std::chrono::duration<double, std::milli>(stop - start).count();
 
-    std::cout << "Expectation value = " << result << std::endl;
-    std::cout << "Best state = " << std::bitset<9>(best_state) << std::endl;
-    std::cout << "CPU Time = " << ms << " ms\n";
+    std::cout << "Expectation value = " << (double)expectation << std::endl;
+    std::cout << "Best state        = " << std::bitset<9>(best_state) << std::endl;
+    std::cout << "CPU Time          = " << ms << " ms\n";
 }
